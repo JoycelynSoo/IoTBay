@@ -8,6 +8,84 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 */
 
 /* Home Page */
+.home_body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('background_1.avif') no-repeat; 
+    background-size:cover;
+    background-position:center;
+}
+
+.home_title{
+    position: absolute;
+    text-align: center;
+    font-size: 100px;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    padding: 20px 40px;
+    background:transparent;
+    backdrop-filter: blur(20px);
+    margin-bottom:500px;
+}
+
+.home_blurb{
+    position: absolute;
+    text-align: center;
+    font-size: 24px;
+    color:white;
+    margin-bottom:250px;
+}
+
+.home_login_or_register{
+    margin-top:160px;
+    width:420px;
+    background:transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.home_register_button { 
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none; 
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size:18px;
+    color: #333;
+    font-weight: 600;
+    margin-top:10px;
+}
+
+.home_login_button {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none; 
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size:18px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom:10px;
+}
+
 
 
 /* Login Page */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
