@@ -1,7 +1,7 @@
 <%-- 
     Document   : main
     Created on : 21 Mar 2024, 9:17:06 pm
-    Author     : joycelyn.soo
+    Author     : biancagrose
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -9,8 +9,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Home Page</title>
-        <link rel="stylesheet" href="CSS/styleSheet.css">
+        <link rel="stylesheet" type="text/css" href="CSS/styleSheet.css">
+        <title>Main Page</title>
     </head>
 
     <body>
@@ -18,27 +18,27 @@
             <div class="nav-bar">
                 <!--centered-logo-->
                 <div class="logo">
-                    <a href="home.jsp"><img src="CSS/IoTBay.png" alt"Home" class="logo"></a>
+                    <a href="main.jsp"><img src="CSS/IoTBay.png" alt"Main" class="logo"></a>
+                </div>
+                
+                <div class="browse-bar">
+                    <button class="smart-home">Smart Home</button>
+                    <%--
+                    <a href="account.jsp">Smart Home</a>
+                    <a href="cart.jsp">Security & Surveillance</a>
+                    <a href="account.jsp">Entertainment</a>
+                    <a href="cart.jsp">Health & Wellness</a>
                 </div>
 
-                <div>
-                    <a href="login.jsp">Login</a>
-                    <a href="register.jsp">Register</a>
+                <div class="account-mgmt">
+                    <a href="account.jsp">Account</a>
+                    <a href="cart.jsp">Cart</a>
                 </div>
             </div> 
         </header>
 
         <div class="home-page">
-            <h1>Welcome to IoTBay!</h1>
-            <p>Explore our range of products and start shopping now</p>
-
-            <form action="register.jsp" method="post">
-                <input type="submit" value="Create Account">
-            </form>
-
-            <form action="login.jsp" method="post">
-                <input type="submit" value="Login">
-            </form>
+            
         </div>
 
         <footer>
