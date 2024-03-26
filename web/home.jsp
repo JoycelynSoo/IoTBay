@@ -9,41 +9,31 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Home Page</title>
         <link rel="stylesheet" href="CSS/styleSheet.css">
+        <title>Home Page</title>
     </head>
+    
+    <body class="home_body">
 
-    <body>
-        <header>
-            <div class="nav-bar">
-                <!--centered-logo-->
-                <div class="logo">
-                    <a href="home.jsp"><img src="CSS/IoTBay.png" alt"Home" class="logo"></a>
-                </div>
-
-                <div>
-                    <a href="login.jsp">Login</a>
-                    <a href="register.jsp">Register</a>
-                </div>
-            </div> 
-        </header>
-
-        <div class="home-page">
-            <h1>Welcome to IoTBay!</h1>
-            <p>Explore our range of products and start shopping now</p>
-
-            <form action="register.jsp" method="post">
-                <input type="submit" value="Create Account">
-            </form>
-
-            <form action="login.jsp" method="post">
-                <input type="submit" value="Login">
-            </form>
-        </div>
-
-        <footer>
-
-        </footer>
+        <p class="home_title">Welcome to IoTBay
+            </p>
+            
+            <p class="home_blurb"> Join IoTBay today! Start exploring endless IoT possibilities.
+                
+            </p>
         
+        <div class="home_login_or_register">
+                <p> <a 
+                        href ="login.jsp"> 
+                        <button class="home_login_button"> Login </button>
+                    </a> 
+                </p>
+                
+                <p> <a 
+                        href="register.jsp"> 
+                        <button class="home_register_button"> Register with IoTBay </button>
+                    </a>
+                </p>
+        </div>
     </body>
 </html>

@@ -7,6 +7,172 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     Author     : joycelyn.soo
 */
 
+/* Home Page */
+.home_body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('background.avif') no-repeat; 
+    background-size:cover;
+    background-position:center;
+}
+
+.home_title{
+    position: absolute;
+    text-align: center;
+    font-size: 100px;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    padding: 20px 40px;
+    background:transparent;
+    backdrop-filter: blur(20px);
+    margin-bottom:500px;
+}
+
+.home_blurb{
+    position: absolute;
+    text-align: center;
+    font-size: 24px;
+    color:white;
+    margin-bottom:250px;
+}
+
+.home_login_or_register{
+    margin-top:160px;
+    width:420px;
+    background:transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.home_register_button { 
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none; 
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size:18px;
+    color: #333;
+    font-weight: 600;
+    margin-top:10px;
+}
+
+.home_login_button {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none; 
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size:18px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom:10px;
+}
+
+/* Login Page */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+.login_body{
+    display:flex;
+    justify-content: center; /* puts it in the top centre */
+    align-items: center;
+    min-height: 100vh; /* mimimum height the element can be, element will be at least 100% of the browser's height '*/
+    background: url('background.avif') no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+
+.login_form { 
+    width:420px;
+    background:transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.login_title{
+    font-size: 60px;
+    text-align: center;
+}
+
+.login_input_box{
+    width: 100%;
+    height:50px;
+    margin: 30px 0; 
+    
+}
+
+.login_input_box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    margin-bottom: 20px;
+    border: none;
+    outline: none; 
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px; 
+    /* text inside the input box ie the placeholder  */
+    font-size: 18px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+
+}
+
+.login_input_box input::placeholder { /* text that the user types in */
+    color: white;
+
+}
+
+.login_button{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none; 
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+        
+}
+
+.login_go_back_to_register {
+    font-size: 17px;
+    text-align: center;
+    margin-top:20px;
+}
+
+.login_register_button p a::hover{
+    text-decoration: underline; 
+}
+
+.login_register_link{
+    color: #fff;
+    font-size: 17px;
+    text-align: center;
+    margin-top: 20px;
+}
+
 /* Main Page */
 .nav-bar {
     position: fixed;
@@ -66,4 +232,3 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     position: relative;
     top: 5px;
 }
-/* Login Page */
