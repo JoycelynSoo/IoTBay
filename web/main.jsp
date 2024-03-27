@@ -22,12 +22,33 @@
                 </div>
                 
                 <div class="browse-bar">
-                    <button class="smart-home">Smart Home</button>
-                    <%--
-                    <a href="account.jsp">Smart Home</a>
-                    <a href="cart.jsp">Security & Surveillance</a>
-                    <a href="account.jsp">Entertainment</a>
-                    <a href="cart.jsp">Health & Wellness</a>
+                    <button class="smart-home-btn">Smart Home</button>
+                    <div class="smart-home-content">
+                        <a href='#'>Link 1</a>
+                        <a href='#'>Link 1</a>
+                        <a href='#'>Link 1</a>
+                    </div>
+                    
+                    <button class="SnS-btn">Security & Surveillance</button>
+                    <div class="SnS-content">
+                        <a href='#'>Link 1</a>
+                        <a href='#'>Link 1</a>
+                        <a href='#'>Link 1</a>
+                    </div>
+                    
+                    <button class="Entrmt-btn">Entertainment</button>
+                    <div class="Entrmt-content">
+                        <a href='#'>Link 1</a>
+                        <a href='#'>Link 1</a>
+                        <a href='#'>Link 1</a>
+                    </div>
+                    
+                    <button class="HnW-btn">Health & Wellness</button>
+                    <div class="HnW-content">
+                        <a href='#'>Link 1</a>
+                        <a href='#'>Link 1</a>
+                        <a href='#'>Link 1</a>
+                    </div>
                 </div>
 
                 <div class="account-mgmt">
