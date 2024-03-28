@@ -1,10 +1,12 @@
 <%-- 
     Document   : welcome
-    Created on : 21 Mar 2024, 9:16:59 pm
-    Author     : joycelyn.soo
+    Created on : 27/03/2024, 4:36:32 PM
+    Author     : bianc
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="beans.User"%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,6 +14,27 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <%
+            String firstName = request.getParameter("firstName");
+            String lastName = request.getParameter("lastName");
+            String email = request.getParameter("email");
+            String password = request.getParameter("password");
+        %>
+        
+        <h1>Welcome <%= firstName %></h1>
+        <p class="p">Your first name is:<%= firstName %></p>
+        <p class="p">Your last name is:<%= lastName %></p>
+        <p class="p">Your email is:<%= email %></p>
+        <p class="p">Your password is:<%= password %></p>
+        
+        <div class="panel-div">
+            <a class="panel-div-button" href="index.jsp">Cancel</a>
+            <a class="panel-div-button" href="main.jsp">Main</a>
+        </div>
+        
+        <%
+            User user = new User(firstName, lastName, email, password);
+            session.setAttribute("User", user);
+        %>
     </body>
 </html>
