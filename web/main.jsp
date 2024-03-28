@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="beans.User"%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,54 +20,53 @@
             <div class="nav-bar">
                 <!--centered-logo-->
                 <div class="logo">
-                    <a href="main.jsp"><img src="CSS/IoTBay.png" alt"Main" class="logo"></a>
-                </div>
-                
-                <div class="browse-bar">
-                    <button class="smart-home-btn">Smart Home</button>
-                    <div class="smart-home-content">
-                        <a href='#'>Link 1</a>
-                        <a href='#'>Link 1</a>
-                        <a href='#'>Link 1</a>
-                    </div>
-                    
-                    <button class="SnS-btn">Security & Surveillance</button>
-                    <div class="SnS-content">
-                        <a href='#'>Link 1</a>
-                        <a href='#'>Link 1</a>
-                        <a href='#'>Link 1</a>
-                    </div>
-                    
-                    <button class="Entrmt-btn">Entertainment</button>
-                    <div class="Entrmt-content">
-                        <a href='#'>Link 1</a>
-                        <a href='#'>Link 1</a>
-                        <a href='#'>Link 1</a>
-                    </div>
-                    
-                    <button class="HnW-btn">Health & Wellness</button>
-                    <div class="HnW-content">
-                        <a href='#'>Link 1</a>
-                        <a href='#'>Link 1</a>
-                        <a href='#'>Link 1</a>
-                    </div>
+                    <a href="main.jsp"><img src="CSS/IoTBay.png" alt=Main class="logo"></a>
                 </div>
 
-                <div class="account-mgmt">
-                    <a href="account.jsp">Account</a>
-                    <a href="cart.jsp">Cart</a>
-                </div>
-            </div> 
+                <table class="account-mgmt">
+                    <tr>
+                      <td>
+                        <a href="account.jsp"><img src="CSS/account.png" alt="account"></a>
+                      </td>
+                      <td>
+                        <a href="cart.jsp"><img src="CSS/shoppingcart.png" alt="cart"></a>
+                      </td>
+                    </tr>
+                  </table>
+            </div>
+
+            <div class="browse-bar">
+                <a href="smart-home.jsp">Smart Home</a>
+                <a href="SnS.jsp">Security & Surveillance</a>
+                <a href="entertainment.jsp">Entertainment</a>
+                <a href="HnW.jsp">Health & Wellness</a>
+                <a href="other.jsp">Other</a>
+            </div>
         </header>
 
-        <div class="home-page">
-            
+        <div class="main-content">
+            <%
+                User user = (User) session.getAttribute("firstName");
+            %>
+
+            <h1>Customer Profile</h1>
+
+            <table id="profile-table">
+                <thead><th>First Name</th><th>Last Name</th><th>Email</th><th>Password</th></thead>
+                <tr><td>${student.firstName}</td><td>${student.lastName}</td><td>${student.email}</td><td>${student.password}</td></tr>
+            </table>
+
+            <div class="panel-div">
+                <a href="edit.jsp" class="panel-div-button">Edit</a>
+                <a class="panel-div-button" hred="logout.jsp">Logout</a>
+            </div>
         </div>
+
 
         <footer>
 
         </footer>
-        
+
     </body>
 </html>
 
