@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="CSS/styleSheet.css">
+        <link rel="stylesheet" href="CSS/newCss.css">
         <title> Login Page </title>
     </head>
     <body class="login_body">
@@ -42,4 +42,3 @@
     </body>
 </html>
 
-<!-- Re-enter password functionality doesn't work  -->

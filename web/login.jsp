@@ -9,14 +9,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="CSS/styleSheet.css">
+        <link rel="stylesheet" href="CSS/newCss.css">
         <title> Login Page </title>
-    </head>
+    </head>  
     <body class="login_body">
         <form action ="welcome.jsp" class="login_form">
             <h1 class="login_title">Login</h1>
 
-            <table class ="login_input_box">
+            <table class ="login_input_box" >
                 <tr><td><input type ="text" placeholder ="Enter email" name = "email" required="true"></td></tr> 
                 <tr><td><input type ="password" placeholder ="Enter password" name = "password" required="true"></td></tr>            
             </table>
