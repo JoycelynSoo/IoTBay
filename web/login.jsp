@@ -17,8 +17,8 @@
             <h1 class="login_title">Login</h1>
 
             <table class ="login_input_box">
-                <tr><td><input type ="text" placeholder ="Enter email" required="true"></td></tr> 
-                <tr><td><input type ="password" placeholder ="Enter password" required="true"></td></tr>            
+                <tr><td><input type ="text" placeholder ="Enter email" name = "email" required="true"></td></tr> 
+                <tr><td><input type ="password" placeholder ="Enter password" name = "password" required="true"></td></tr>            
             </table>
             
             

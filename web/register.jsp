@@ -17,14 +17,14 @@
             <h1 class="login_title">Register</h1>
 
             <table class ="login_input_box">
-                <tr><td><input type ="text" placeholder ="Enter first name" required="true"></td></tr>
-                <tr><td><input type ="text" placeholder ="Enter last name" required="true"></td></tr> 
-                <tr><td><input type ="text" placeholder ="Enter email" required="true"></td></tr> 
-                <tr><td><input type ="password" placeholder ="Enter password" required="true"></td></tr>
-                <tr><td><input type ="password" placeholder ="Re-enter password" required="true"></td></tr>
+                <tr><td><input type ="text" placeholder ="Enter first name" name ="firstName" required="true"></td></tr>
+                <tr><td><input type ="text" placeholder ="Enter last name" name="lastName" required="true"></td></tr> 
+                <tr><td><input type ="text" placeholder ="Enter email" name="email" required="true"></td></tr> 
+                <tr><td><input type ="date" placeholder ="Enter DOB" name="dob" required="true"></td></tr> 
+                <tr><td><input type ="password" placeholder ="Enter password" name="password" required="true"></td></tr>
             </table>
             
-            
+
             <div class="login_check">
                 <input class="login_button" type ="submit" value ="Register">
             </div>
@@ -41,3 +41,5 @@
         </form>
     </body>
 </html>
+
+<!-- Re-enter password functionality doesn't work  -->
