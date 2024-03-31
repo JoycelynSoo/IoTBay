@@ -19,7 +19,7 @@
             String firstName = request.getParameter("firstName");
             String lastName = request.getParameter("lastName");
             String email = request.getParameter("email");
-            String dob = request.getParameter("DOB");
+            String dob = request.getParameter("dob");
          %>
          <div class="welcome_container">
          <div class ="welcome_form">             
@@ -32,32 +32,18 @@
              
              <div class ="welcome_personalinfo">
                <h1>Personal Information</h1>
-                <table class = "welcome_table">
-                    
-                    <tr>
-                        <th class="welcome_table_width"></th>
-                    </tr>
-                   
-                    <tr>
-                     <td> <h2 class = "welcome_fields" >Your first name is</h2> </td>
-                     <td><h2 class = "welcome_fields" ><%= firstName %> </h2></td>
-                   </tr>
-                   
-                   <tr>
-                     <td><h2 class = "welcome_fields" >Your last name is</h2></td>
-                     <td><h2 class = "welcome_fields" > <%= lastName %> </h2></td>
-                   </tr>
-                   
-                   <tr>
-                     <td> <h2 class = "welcome_fields" >Your email is</h2> </td>
-                     <td><h2 class = "welcome_fields" ><%= email %> </h2></td>
-                   </tr>
-                   
-                   <tr>
-                     <td> <h2 class = "welcome_fields" >Your DOB is</h2> </td>
-                     <td><h2 class = "welcome_fields" ><%= dob %> </h2></td>
-                   </tr>
-                </table>             
+               <h2 class = "welcome_fields" >your first name is</h2> 
+               <h2 class = "welcome_fields" ><%= firstName %> </h2>
+               <br>
+               <h2 class = "welcome_fields" >Your last name is</h2>
+               <h2 class = "welcome_fields" > <%= lastName %> </h2>
+               <br>
+               <h2 class = "welcome_fields" >Your email is</h2>
+               <h2 class = "welcome_fields" ><%= email %> </h2>
+               <br>
+               <h2 class = "welcome_fields" >Your DOB is</h2> 
+               <h2 class = "welcome_fields" ><%= dob %> </h2>
+                 
              </div>
         </div> 
          </div>
