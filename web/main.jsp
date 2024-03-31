@@ -75,10 +75,10 @@
                         <a href="logout.jsp">logout</a>
                     </td>
                 </tr>
-            </table>     
+            </table>
         </div>
             
-        <a "href="products.jsp" class="promotional-link">
+        <a href="products.jsp" class="promotional-link">
             <div class="promotional-banner">
                 <p class="promotional-body">
                     Explore our range<br> 
@@ -86,12 +86,37 @@
                 </p>
             </div>
         </a>
+
              
         <div class="main-content">
-            <div class="smart-home">
-                
+            <div class="product-table">
+                <table>
+                    <tr>
+                      <td>
+                        <a href="products.jsp">Smart Home<img src="CSS/smarthome.jpg"></a>
+                      </td>
+                      <td>
+                        <a href="products.jsp">Surveillance & Security<img src="CSS/sns.png"></a>
+                      </td>
+                      <td>
+                        <a href="products.jsp">Entertainment<img src="CSS/entertainment.png"></a>
+                      </td>
+                    </tr>
+                 </table>
             </div>
-                
+            
+            <div class="product-table-2">
+                <table >
+                    <tr>
+                        <td>
+                            <a href="products.jsp">Health & Wellness<img src="CSS/hnw.jpg"></a>
+                        </td>
+                        <td>
+                            <a href="products.jsp">Other<img src="CSS/other.png"></a>
+                        </td>
+                    </tr>
+                </table> 
+            </div>
         </div>
 
         <footer>
