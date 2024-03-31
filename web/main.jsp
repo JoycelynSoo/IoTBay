@@ -44,29 +44,83 @@
             </div>
         </header>
 
-        <div class="main-content">
+        <div class="account-content-bg"></div>
+        
+        <div class="account-content">
             <%
-                User user = (User) session.getAttribute("firstName");
+                User user = (User) session.getAttribute("user");
             %>
 
-            <h1>Customer Profile</h1>
-
-            <table id="profile-table">
-                <thead><th>First Name</th><th>Last Name</th><th>Email</th><th>Password</th></thead>
-                <tr><td>${student.firstName}</td><td>${student.lastName}</td><td>${student.email}</td><td>${student.password}</td></tr>
+            <h1>Your Profile</h1>
+     
+            <table class="profile-details">
+                <tr>
+                    <td class="profile-detail">First Name:</td>
+                    <td class="profile-detail-input">${user.firstName}</td>
+                    <td class="profile-detail">Last Name:</td>
+                    <td class="profile-detail-input">${user.lastName}</td>
+                    <td class="profile-detail">Email:</td>
+                    <td class="profile-detail-input">${user.email}</td>
+                    <td class="profile-detail">Password:</td>
+                    <td class="profile-detail-input">${user.password}</td>
+                </tr>
             </table>
-
-            <div class="panel-div">
-                <a href="edit.jsp" class="panel-div-button">Edit</a>
-                <a class="panel-div-button" hred="logout.jsp">Logout</a>
+   
+            <table class="profile-buttons">
+                <tr>
+                    <td>
+                        <a href="edit.jsp">edit</a>
+                    </td>
+                    <td>
+                        <a href="logout.jsp">logout</a>
+                    </td>
+                </tr>
+            </table>     
+        </div>
+            
+        <a "href="products.jsp" class="promotional-link">
+            <div class="promotional-banner">
+                <p class="promotional-body">
+                    Explore our range<br> 
+                    of products
+                </p>
             </div>
+        </a>
+             
+        <div class="main-content">
+            <div class="smart-home">
+                
+            </div>
+                
         </div>
 
-
         <footer>
+            <div class="main-footer">
+                <p>
+                    IoTBay©
+                </p>
 
+                <table class="footer-links">
+                    <tr>
+                        <td>
+                            <a href="home.jsp">Home</a>
+                        </td>
+                        <td>
+                            <a href="main.jsp">Main</a>
+                        </td>
+                        <td>
+                            <a href="welcome.jsp">Welcome</a>
+                        </td>
+                        <td>
+                            <a href="register.jsp">Register</a>
+                        </td>
+                        <td>
+                            <a href="login.jsp">Login</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </footer>
-
     </body>
 </html>
 

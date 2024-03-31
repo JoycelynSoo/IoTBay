@@ -34,7 +34,7 @@
         
         <%
             User user = new User(firstName, lastName, email, password);
-            session.setAttribute("User", user);
+            session.setAttribute("user", user);
         %>
     </body>
 </html>

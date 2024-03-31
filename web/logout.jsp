@@ -1,7 +1,7 @@
 <%-- 
-    Document   : logout
-    Created on : 21 Mar 2024, 9:17:17 pm
-    Author     : joycelyn.soo
+    Document   : register
+    Created on : 23/03/2024, 2:17:06 PM
+    Author     : Biancagrose
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
