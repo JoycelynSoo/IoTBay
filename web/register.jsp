@@ -39,8 +39,9 @@
       </header>
 
     </head>
-    <body class="login_body">
-        <form action ="welcome.jsp" class="login_form">
+    <body class="login_body1">
+        <div class ="login_body">
+            <form action ="welcome.jsp" class="login_form">
             <h1 class="login_title">Register</h1>
 
             <table class ="login_input_box">
@@ -66,6 +67,34 @@
                 </p>
             </div>
         </form>
+        </div>
+        <footer>
+            <div class="main-footer">
+                <p>
+                    IoTBay©
+                </p>
+
+                <table class="footer-links">
+                    <tr>
+                        <td>
+                            <a href="home.jsp">Home</a>
+                        </td>
+                        <td>
+                            <a href="main.jsp">Main</a>
+                        </td>
+                        <td>
+                            <a href="welcome.jsp">Welcome</a>
+                        </td>
+                        <td>
+                            <a href="register.jsp">Register</a>
+                        </td>
+                        <td>
+                            <a href="login.jsp">Login</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </footer>
     </body>
 </html>
 

@@ -40,7 +40,10 @@
             </div>
       </header>
     </head>   
-    <body class="welcome_body">
+    
+    <body class="welcome_body1">
+    <div class ="welcome_body">
+    
     <div class="welcome_box" >            
         <% 
             String firstName = request.getParameter("firstName");
@@ -49,13 +52,13 @@
             String dob = request.getParameter("dob");
          %>
          <div class="welcome_container">
-         <div class ="welcome_form">             
-             <div class="welcome_title">
-                <img src="CSS/ProfilePic.webp" alt=Profile class="welcome_ProfilePic" >
-                <h1>Welcome</h1>
-                <h1><%= firstName %></h1>
-                <h1><%= lastName %></h1>
-             </div>
+            <div class ="welcome_form">             
+                <div class="welcome_title">
+                   <img src="CSS/ProfilePic.webp" alt=Profile class="welcome_ProfilePic" >
+                   <h1>Welcome</h1>
+                   <h1><%= firstName %></h1>
+                   <h1><%= lastName %></h1>
+                </div>
              
              <div class ="welcome_personalinfo">
                <h1>Personal Information</h1>
@@ -72,8 +75,43 @@
                <h2 class = "welcome_fields" ><%= dob %> </h2>
                  
              </div>
-        </div> 
+            </div>
+            <form action="main.jsp">
+                <div class="login_check">
+                <input action="main.jsp" class="login_button" type ="submit" value ="Main Page">
+                </div>   
+            </form> 
          </div>
     </div>
+    </div>
+       <footer>
+            <div class="main-footer">
+                <p>
+                    IoTBay©
+                </p>
+
+                <table class="footer-links">
+                    <tr>
+                        <td>
+                            <a href="home.jsp">Home</a>
+                        </td>
+                        <td>
+                            <a href="main.jsp">Main</a>
+                        </td>
+                        <td>
+                            <a href="welcome.jsp">Welcome</a>
+                        </td>
+                        <td>
+                            <a href="register.jsp">Register</a>
+                        </td>
+                        <td>
+                            <a href="login.jsp">Login</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </footer>
     </body>
+    
+
 </html>
