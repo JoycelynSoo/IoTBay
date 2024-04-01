@@ -9,8 +9,35 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="CSS/newCss.css">
-        <title> Login Page </title>
+        <link rel="stylesheet" href="CSS/styleSheet.css">
+        <title> Register Page </title>
+              <header>
+            <div class="nav-bar">
+                <!--centered-logo-->
+                <div class="logo">
+                    <a href="main.jsp"><img src="CSS/IoTBay.png" alt=Main class="logo"></a>
+                </div>
+
+                <table class="account-mgmt">
+                    <tr>
+                      <td>
+                        <a href="login.jsp"><img src="CSS/account.png" alt="account"></a>
+                      </td>
+                      <td>
+                        <a href="cart.jsp"><img src="CSS/shoppingcart.png" alt="cart"></a>
+                      </td>
+                    </tr>
+                  </table>
+            </div>
+            <div class="browse-bar">
+                <a href="smart-home.jsp">Smart Home</a>
+                <a href="SnS.jsp">Security & Surveillance</a>
+                <a href="entertainment.jsp">Entertainment</a>
+                <a href="HnW.jsp">Health & Wellness</a>
+                <a href="other.jsp">Other</a>
+            </div>
+      </header>
+
     </head>
     <body class="login_body">
         <form action ="welcome.jsp" class="login_form">

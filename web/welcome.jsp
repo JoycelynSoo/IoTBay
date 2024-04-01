@@ -9,12 +9,39 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="CSS/newCss.css">
+        <link rel="stylesheet" href="CSS/styleSheet.css">
 
         <title>Welcome</title>
+            
+          <header>
+            <div class="nav-bar">
+                <!--centered-logo-->
+                <div class="logo">
+                    <a href="main.jsp"><img src="CSS/IoTBay.png" alt=Main class="logo"></a>
+                </div>
+
+                <table class="account-mgmt">
+                    <tr>
+                      <td>
+                        <a href="login.jsp"><img src="CSS/account.png" alt="account"></a>
+                      </td>
+                      <td>
+                        <a href="cart.jsp"><img src="CSS/shoppingcart.png" alt="cart"></a>
+                      </td>
+                    </tr>
+                  </table>
+            </div>
+            <div class="browse-bar">
+                <a href="smart-home.jsp">Smart Home</a>
+                <a href="SnS.jsp">Security & Surveillance</a>
+                <a href="entertainment.jsp">Entertainment</a>
+                <a href="HnW.jsp">Health & Wellness</a>
+                <a href="other.jsp">Other</a>
+            </div>
+      </header>
     </head>   
-   
-    <body class="welcome_body" >            
+    <body class="welcome_body">
+    <div class="welcome_box" >            
         <% 
             String firstName = request.getParameter("firstName");
             String lastName = request.getParameter("lastName");
@@ -24,7 +51,7 @@
          <div class="welcome_container">
          <div class ="welcome_form">             
              <div class="welcome_title">
-                <img src="CSS/ProfilePic.jpeg" alt=Profile class="welcome_ProfilePic" >
+                <img src="CSS/ProfilePic.webp" alt=Profile class="welcome_ProfilePic" >
                 <h1>Welcome</h1>
                 <h1><%= firstName %></h1>
                 <h1><%= lastName %></h1>
@@ -47,5 +74,6 @@
              </div>
         </div> 
          </div>
+    </div>
     </body>
 </html>
