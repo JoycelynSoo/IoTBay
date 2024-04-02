@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="CSS/newcss.css">
+        <link rel="stylesheet" href="CSS/styleSheet.css">
 
         <title>Welcome</title>
             
@@ -90,25 +90,7 @@
                     IoTBay©
                 </p>
 
-                <table class="footer-links">
-                    <tr>
-                        <td>
-                            <a href="home.jsp">Home</a>
-                        </td>
-                        <td>
-                            <a href="main.jsp">Main</a>
-                        </td>
-                        <td>
-                            <a href="welcome.jsp">Welcome</a>
-                        </td>
-                        <td>
-                            <a href="register.jsp">Register</a>
-                        </td>
-                        <td>
-                            <a href="login.jsp">Login</a>
-                        </td>
-                    </tr>
-                </table>
+
             </div>
         </footer>
     </body>

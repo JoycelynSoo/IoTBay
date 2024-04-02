@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="CSS/newcss.css">
+        <link rel="stylesheet" href="CSS/styleSheet.css">
         <title> Register Page </title>
               <header>
             <div class="nav-bar">
