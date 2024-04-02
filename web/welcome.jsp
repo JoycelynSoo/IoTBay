@@ -57,26 +57,41 @@
             <div class ="welcome_form">             
                 <div class="welcome_title">
                    <img src="CSS/icon.webp" alt=Profile class="welcome_ProfilePic" >
-                   <h1>Welcome</h1>
-                   <h1><%= firstName %></h1>
-                   <h1><%= lastName %></h1>
+                    <% if (firstName == null) { %>
+                        <h1>Welcome Back Again</h1>
+                    <% } else { %>
+                        <h1>Welcome</h1>
+                    <% } %>
+                    <% if (firstName != null) { %>
+                        <h1><%= firstName %></h1>
+                    <% } %>
+                   <% if (lastName != null) { %>
+                    <h1><%= lastName %></h1>
+                     <% } %>
                 </div>
              
-             <div class ="welcome_personalinfo">
-               <h1>Personal Information</h1>
-               <h2 class = "welcome_fields" >your first name is</h2> 
-               <h2 class = "welcome_fields" ><%= firstName %> </h2>
-               <br>
-               <h2 class = "welcome_fields" >Your last name is</h2>
-               <h2 class = "welcome_fields" > <%= lastName %> </h2>
-               <br>
-               <h2 class = "welcome_fields" >Your email is</h2>
-               <h2 class = "welcome_fields" ><%= email %> </h2>
-               <br>
-               <h2 class = "welcome_fields" >Your DOB is</h2> 
-               <h2 class = "welcome_fields" ><%= dob %> </h2>
-                 
-             </div>
+        <div class="welcome_personalinfo">
+            <h1>Personal Information</h1>
+            <% if (firstName != null) { %>
+                <h2 class="welcome_fields">your first name is</h2> 
+                <h2 class="welcome_fields"><%= firstName %></h2>
+            <% } %>
+            <br>
+            <% if (lastName != null) { %>
+                <h2 class="welcome_fields">Your last name is</h2>
+                <h2 class="welcome_fields"><%= lastName %></h2>
+            <% } %>
+            <br>
+            <% if (email != null) { %>
+                <h2 class="welcome_fields">Your email is</h2>
+                <h2 class="welcome_fields"><%= email %></h2>
+            <% } %>
+            <br>
+            <% if (dob != null) { %>
+                <h2 class="welcome_fields">Your DOB is</h2> 
+                <h2 class="welcome_fields"><%= dob %></h2>
+            <% } %>
+        </div>
             </div>
             <form action="main.jsp">
                 <div class="login_check">
