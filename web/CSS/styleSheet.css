@@ -7,78 +7,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     Author     : joycelyn.soo
 */
 
-/* Home Page */
-.home_body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: url('background_1.avif') no-repeat; 
-    background-size:cover;
-    background-position:center;
-}
-
-.home_title{
-    position: absolute;
-    text-align: center;
-    font-size: 100px;
-    color: white;
-    border: 2px solid rgba(255, 255, 255, .2);
-    border-radius: 10px;
-    padding: 20px 40px;
-    background:transparent;
-    backdrop-filter: blur(20px);
-    margin-bottom:500px;
-}
-
-.home_blurb{
-    position: absolute;
-    text-align: center;
-    font-size: 24px;
-    color:white;
-    margin-bottom:250px;
-}
-
-.home_login_or_register{
-    margin-top:160px;
-    width:420px;
-    background:transparent;
-    border: 2px solid rgba(255, 255, 255, .2);
-    backdrop-filter: blur(20px);
-    color: #fff;
-    border-radius: 10px;
-    padding: 30px 40px;
-}
-
-.home_register_button { 
-    width: 100%;
-    height: 45px;
-    background: #fff;
-    border: none;
-    outline: none; 
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-    cursor: pointer;
-    font-size:18px;
-    color: #333;
-    font-weight: 600;
-    margin-top:10px;
-}
-
-.home_login_button {
-    width: 100%;
-    height: 45px;
-    background: #fff;
-    border: none;
-    outline: none; 
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-    cursor: pointer;
-    font-size:18px;
-    color: #333;
-    font-weight: 600;
-    margin-bottom:10px;
-}
 
 
 
@@ -89,3 +17,234 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     box-sizing: border-box;
     font-family: serif;
 }
+
+/* Navigation Bar CSS */
+.nav-bar {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    background-color: #0e2745;
+    overflow: hidden;
+    width: 100%;
+    height: 90px;
+    z-index: 1000;
+}
+
+.nav-bar a {
+    float: right;
+    top: 0px;
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.nav-bar a:hover {
+    color: #00ffff;
+}
+
+.logo {
+    margin-top: -5px;
+    margin-left: 10px;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.account-mgmt {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.browse-bar {
+    float: left;
+    text-align: left;
+    margin-top: 80px;
+    top: 5px;
+    background-color: #123157;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+}
+
+.browse-bar a {
+    text-decoration: none;
+    font-weight: bold;
+    font-family: monospace;
+    color: whitesmoke;
+    padding: 15px;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 600px) {
+    .nav-bar a {
+        float: none;
+        display: block;
+    }
+
+    .logo img {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+    }
+}
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Adjust the height as needed */
+    overflow: hidden;
+    font-family: monospace;
+    font-size: 30px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 35%;
+    left: 80px;
+    color: white; /* Change the color of the text */
+    z-index: 1;
+    font-family: monospace;
+    font-size: 50px;
+}
+
+.button-container {
+    margin-top: 40px; /* Adjust as needed */
+    margin-left: 20px;
+}
+
+.button-container .btn {
+    display: inline-block;
+    background-color: rgba(20, 50, 90, 0.8);
+    color: #fff;
+    padding: 25px 50px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 60px; /* Adjust spacing between buttons */
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.button-container .btn:hover {
+    background-color: #2968ba; /* Change background color on hover */
+}
+
+
+
+
+.image-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 180px;
+    margin-top: 80px;
+    padding: 0 20px;
+    justify-content: center;
+    padding-bottom:80px;
+}
+.image-item {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 350px;
+    overflow: hidden; 
+}
+
+.image-item img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0; 
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgba(20, 50, 90, 0.4);
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    opacity: 0; 
+    transition: opacity 0.3s; 
+}
+
+.image-item:hover .overlay {
+    opacity: 1;
+}
+
+body.home_body {
+    box-sizing: border-box;
+    font-family: serif;
+    background-color: white; /*background colour */
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Footer*/
+footer {
+    position: fixed;
+    background-color: #0e2745;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    width: 100%;
+    padding: 0;
+}
+
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+}
+
+.main-footer p {
+    font-family: monospace;
+    color: whitesmoke;
+    font-weight: bold;
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 20px;
+}
+
+
+.footer-links a {
+    color: whitesmoke;
+    margin-right: 10px;
+    font-weight: bold;
+    padding: 5px;
+    font-family: monospace;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.footer-links a:hover {
+    background-color: #123157;
+    color: #00ffff;
+} 
