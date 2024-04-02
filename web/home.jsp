@@ -42,6 +42,7 @@
             <a href="SnS.jsp">Security & Surveillance</a>
             <a href="entertainment.jsp">Entertainment</a>
             <a href="HnW.jsp">Health & Wellness</a>
+            <a href="none.jsp">Other</a>
         </div>
     </header>
     
@@ -84,9 +85,6 @@
                     <tr>
                         <td>
                             <a href="home.jsp">Home</a>
-                        </td>
-                        <td>
-                            <a href="main.jsp">Main</a>
                         </td>
                         <td>
                             <a href="register.jsp">Register</a>
