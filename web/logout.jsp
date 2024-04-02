@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="beans.User"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -67,6 +68,7 @@
 
             </div>
         </footer>
+        <% session.invalidate(); %>
     </body>
 </html>
 

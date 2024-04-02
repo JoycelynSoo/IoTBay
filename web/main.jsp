@@ -16,7 +16,7 @@
         <title>Main Page</title>
     </head>
 
-    <body>
+    <body>      
         <header>
             <div class="nav-bar">
                 <!--centered-logo-->

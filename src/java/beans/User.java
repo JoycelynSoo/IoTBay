@@ -9,13 +9,21 @@ public class User {
     private String password;
     private String firstName;
     private String lastName;
-    public User(String firstName, String lastName, String email, String password) {
+    private String dob;
+    public User(String firstName, String lastName, String email, String dob, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.dob = dob;
         this.password = password;
     }
+     public String getDob() {
+        return dob;
+    }
  
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
     public String getEmail() {
         return email;
     }

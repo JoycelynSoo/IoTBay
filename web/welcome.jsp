@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="beans.User"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -50,6 +51,7 @@
             String lastName = request.getParameter("lastName");
             String email = request.getParameter("email");
             String dob = request.getParameter("dob");
+            String password = request.getParameter("password");
          %>
          <div class="welcome_container">
             <div class ="welcome_form">             
@@ -89,10 +91,13 @@
                 <p>
                     IoTBay©
                 </p>
-
-
             </div>
         </footer>
+     
+     <%
+         User user = new User(firstName, lastName, email, dob, password);
+         session.setAttribute("user", user);
+     %>
     </body>
     
 
