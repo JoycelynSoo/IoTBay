@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="CSS/styleSheet.css">
+        <link rel="stylesheet" href="CSS/newcss.css">
 
         <title>Welcome</title>
             
@@ -54,7 +54,7 @@
          <div class="welcome_container">
             <div class ="welcome_form">             
                 <div class="welcome_title">
-                   <img src="CSS/ProfilePic.webp" alt=Profile class="welcome_ProfilePic" >
+                   <img src="CSS/icon.webp" alt=Profile class="welcome_ProfilePic" >
                    <h1>Welcome</h1>
                    <h1><%= firstName %></h1>
                    <h1><%= lastName %></h1>

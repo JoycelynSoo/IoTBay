@@ -19,7 +19,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     background-position:center; 
 }
 .welcome_container {
-    background-color: whitesmoke;
+    background-color: transparent;
     width:1000px;
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(20px);
@@ -43,7 +43,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 
 .welcome_title{
     font-size: 30px;
-    color: #123157;
+    color: whitesmoke;
     text-align: center;
 }
 .welcome_personalinfo{
@@ -51,19 +51,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     margin-top:40px;
     font-size: 40px;
     margin-bottom:35px;
-    color: #123157;
+    color: whitesmoke;
 }
 
 .welcome_ProfilePic img {
 }
 .welcome_ProfilePic {
-    width:250px;
-    height:250px;
+    width:300px;
+    height:300px;
     margin-bottom: 30px;
 }
 
 .welcome_fields{
-    color:black;
+    color:whitesmoke;
     text-transform: uppercase;
     font-family : "Roberto", sans-serif;
     font-size: 20px;
