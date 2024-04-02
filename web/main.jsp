@@ -1,9 +1,8 @@
 <%-- 
     Document   : main
     Created on : 21 Mar 2024, 9:17:06 pm
-    Author     : joycelyn.soo
+    Author     : biancagrose
 --%>
-
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="beans.User"%>
@@ -16,12 +15,12 @@
         <title>Main Page</title>
     </head>
 
-    <body>      
+    <body>
         <header>
             <div class="nav-bar">
                 <!--centered-logo-->
                 <div class="logo">
-                    <a href="main.jsp"><img src="CSS/IoTBay.png" alt=Main class="logo"></a>
+                    <a href="home.jsp"><img src="CSS/IoTBay.png" alt=Main class="logo"></a>
                 </div>
 
                 <table class="account-mgmt">
@@ -56,7 +55,7 @@
      
             <table class="profile-details">
                 <tr>
-                    <td class="profile-detail">First Name:</td>
+                    <td class="profile-detail">First Name:</td> 
                     <td class="profile-detail-input">${user.firstName}</td>
                     <td class="profile-detail">Last Name:</td>
                     <td class="profile-detail-input">${user.lastName}</td>
@@ -94,13 +93,13 @@
                 <table>
                     <tr>
                       <td>
-                        <a href="products.jsp">Smart Home<img src="CSS/smarthome.jpg"></a>
+                        <a href="main.jsp">Smart Home<img src="CSS/smarthome.jpg"></a>
                       </td>
                       <td>
-                        <a href="products.jsp">Surveillance & Security<img src="CSS/sns.png"></a>
+                        <a href="main.jsp">Surveillance & Security<img src="CSS/sns.png"></a>
                       </td>
                       <td>
-                        <a href="products.jsp">Entertainment<img src="CSS/entertainment.png"></a>
+                        <a href="main.jsp">Entertainment<img src="CSS/entertainment.png"></a>
                       </td>
                     </tr>
                  </table>
@@ -110,13 +109,53 @@
                 <table >
                     <tr>
                         <td>
-                            <a href="products.jsp">Health & Wellness<img src="CSS/hnw.jpg"></a>
+                            <a href="main.jsp">Health & Wellness<img src="CSS/hnw.jpg"></a>
                         </td>
                         <td>
-                            <a href="products.jsp">Other<img src="CSS/other.png"></a>
+                            <a href="main.jsp">Other<img src="CSS/other.png"></a>
                         </td>
                     </tr>
                 </table> 
+            </div>
+        </div>
+                
+        <div class="product-catalog">
+            <hr> <!-- Divider line -->
+            
+            <h1>Featured Products</h1>
+
+            <div class="products">
+                <!-- Product 1 -->
+                <div class="product">
+                    <img src="CSS/product-a.png" alt="MILESIGHT UF51 5G ULTRA FAST CELLULAR ROUTER CPE">
+                    <div class="product-title">MILESIGHT UF51 5G ULTRA FAST CELLULAR ROUTER CPE</div>
+                    <p>Price: $1,099.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            
+                <!-- Product 2 -->
+                <div class="product">
+                    <img src="CSS/product-b.png" alt="TR321 INDUSTRIAL 4G LTE CELLULAR ROUTER 2-LAN">
+                    <div class="product-title">TR321 INDUSTRIAL 4G LTE CELLULAR ROUTER 2-LAN</div>
+                    <p>Price: $429.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            
+                <!-- Product 3 -->
+                <div class="product">
+                    <img src="CSS/product-c.png" alt="WS523-10A-AU LORAWAN SMART PORTABLE SOCKET">
+                    <div class="product-title">WS523-10A-AU LORAWAN SMART PORTABLE SOCKET</div>
+                    <p>Price: $149.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            
+                <!-- Product 4 -->
+                <div class="product">
+                    <img src="CSS/product-d.png" alt="LOPY & SIPY ANTENNA KIT">
+                    <div class="product-title">LOPY & SIPY ANTENNA KIT</div>
+                    <p>Price: $30</p>
+                    <button>Add to Cart</button>
+                </div>
             </div>
         </div>
 

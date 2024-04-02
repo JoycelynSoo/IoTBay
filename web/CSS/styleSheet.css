@@ -6,6 +6,103 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     Created on : 22 Mar 2024, 12:15:44 am
     Author     : joycelyn.soo
 */
+/* Home page*/
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Adjust the height as needed */
+    overflow: hidden;
+    font-family: monospace;
+    font-size: 30px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 35%;
+    left: 80px;
+    color: white; /* Change the color of the text */
+    z-index: 1;
+    font-family: monospace;
+    font-size: 50px;
+}
+
+.button-container {
+    margin-top: 40px; /* Adjust as needed */
+    margin-left: 20px;
+}
+
+.button-container .btn {
+    display: inline-block;
+    background-color: rgba(20, 50, 90, 0.8);
+    color: #fff;
+    padding: 25px 50px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 60px; /* Adjust spacing between buttons */
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.button-container .btn:hover {
+    background-color: #2968ba; /* Change background color on hover */
+}
+
+
+.image-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 180px;
+    margin-top: 80px;
+    padding: 0 20px;
+    justify-content: center;
+    padding-bottom:80px;
+}
+.image-item {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 350px;
+    overflow: hidden; 
+}
+
+.image-item img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0; 
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgba(20, 50, 90, 0.4);
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    opacity: 0; 
+    transition: opacity 0.3s; 
+}
+
+.image-item:hover .overlay {
+    opacity: 1;
+}
+
+body.home_body {
+    box-sizing: border-box;
+    font-family: serif;
+    background-color: white; /*background colour */
+    margin: 0;
+    padding: 0;
+}
 
 /* Welcome Page */
 .welcome_body{
@@ -149,7 +246,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     font-weight: 600;
         
 }
-
+.login_button:hover {
+    background-color: #2968ba; /* Change background color on hover */
+}
 .login_go_back_to_register {
     font-size: 17px;
     text-align: center;
@@ -258,6 +357,7 @@ header {
     padding: 10px;
     z-index: 2;
 }
+
 .account-content h1 {
     font-family: sans-serif;
     color: black;
@@ -349,32 +449,22 @@ header {
     margin: 0 auto;
 }
 
-.product-table table{
-  z-index: 2;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%; 
- border-spacing: 20px;
+.product-table table {
+    z-index: 2;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    border-spacing: 20px;
 }
 
 div.product-table-2 table {
     z-index: 2;
     margin: 0 auto;
-    width: 50%; 
+    width: 50%;
     border-spacing: 20px;
 }
 
-.product-table td {
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    text-align: center;
-    border: 25px solid #0e2745;
-    padding: 20px;
-    border-radius:10px;
-    background-color: white;
-}
-
+.product-table td,
 .product-table-2 td {
     position: relative;
     text-align: center;
@@ -384,35 +474,19 @@ div.product-table-2 table {
     background-color: white;
 }
 
-.product-table td:hover {
-    border: 25px solid #123157;
-}
-
+.product-table td:hover,
 .product-table-2 td:hover {
     border: 25px solid #123157;
 }
 
-.product-table img {
-    display: block;
-    height: 150px;
-    margin: 0 auto;
-}
-
+.product-table img,
 .product-table-2 img {
     display: block;
     height: 150px;
     margin: 0 auto;
 }
 
-.product-table a {
-    text-decoration: none;
-    display: block;
-    color: black;
-    font-size: 20px;
-    font-weight: bolder;
-    font-family: monospace;
-}
-
+.product-table a,
 .product-table-2 a {
     text-decoration: none;
     display: block;
@@ -422,12 +496,101 @@ div.product-table-2 table {
     font-family: monospace;
 }
 
-.product-table a:hover {
+.product-table a:hover,
+.product-table-2 a:hover {
     text-decoration: underline;
 }
 
-.product-table-2 a:hover {
+.product-catalog {
+    background-color: whitesmoke;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    boxing-size: border-box;
+    text-align: center;
+}
+
+.product-catalog h1 {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: monospace;
+    font-weight: bold;
+    color: black;
+    font-size: 40px;
     text-decoration: underline;
+}
+
+.product-catalog hr {
+    border: none;
+    height: 4px;
+    background-color: #123157;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin: 10px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: auto;
+}
+
+.product-title {
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: Consolas;
+}
+
+.product .product-title {
+    margin-top: auto;
+}
+
+.product p {
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-style: italic;
+    margin-top: auto;
+}
+
+.product button {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #0e2745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #123157;
+    color: #00ffff;
 }
 
 /* Logout Footer*/
@@ -453,6 +616,9 @@ div.product-table-2 table {
     font-weight: 600;
     margin-bottom:20px;
     margin-top: 40px;
+}
+.logout_button:hover{
+    background-color: #2968ba; /* Change background color on hover */
 }
 .logout_form { 
     width:550px;

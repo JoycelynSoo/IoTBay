@@ -17,7 +17,7 @@
             <div class="nav-bar">
                 <!--centered-logo-->
                 <div class="logo">
-                    <a href="main.jsp"><img src="CSS/IoTBay.png" alt=Main class="logo"></a>
+                    <a href="home.jsp"><img src="CSS/IoTBay.png" alt=Main class="logo"></a>
                 </div>
 
                 <table class="account-mgmt">
@@ -52,7 +52,7 @@
             
             
             <div class="login_check">
-                <input class="login_button" type ="submit" value ="Login">
+                <a href="welcome.jsp"><button class="login_button">Login</button></a>
             </div>
             
             <div class="login_go_back_to_register"
