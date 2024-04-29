@@ -105,5 +105,52 @@
                 conn.close();
 
           %>
+          
+
+         </main>
+
+        <script>
+          // Declare a global array variable to store the product details
+          var cart = [];
+
+          function addToCart(productId, productName, productPrice) {
+          // Retrieve the cart data from local storage
+          var cartJson = localStorage.getItem('cart');
+
+          // Convert the cart JSON string to an array
+          var cart = JSON.parse(cartJson) || [];
+
+          // Check if the product is already in the cart
+          var productIndex = cart.findIndex(function(item) {
+            return item.productId === productId;
+          });
+
+          // If the product is already in the cart, increment the quantity
+          if (productIndex !== -1) {
+            cart[productIndex].quantity++;
+          } else {
+            // Otherwise, add a new object to the cart array
+            cart.push({
+              productId: productId,
+              name: productName,
+              price: productPrice,
+              quantity: 1
+            });
+          }
+
+          // Convert the cart array to a JSON string
+          var cartJson = JSON.stringify(cart);
+
+          // Store the cart JSON string in local storage
+          localStorage.setItem('cart', cartJson);
+
+          // Display a notification message
+          alert("Product added to cart.");
+        }
+        </script>
+        
+        </body>
+</html>
+
 
          
