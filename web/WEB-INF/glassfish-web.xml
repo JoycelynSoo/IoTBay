@@ -2,7 +2,7 @@
 <!DOCTYPE glassfish-web-app PUBLIC "-//GlassFish.org//DTD GlassFish Application Server 3.1 Servlet 3.0//EN" "http://glassfish.org/dtds/glassfish-web-app_3_0-1.dtd">
 <!--
     Copyright (c) 1997, 2018 Oracle and/or its affiliates. All rights reserved.
-    
+
     This program and the accompanying materials are made available under the
     terms of the Eclipse Public License v. 2.0, which is available at
     http://www.eclipse.org/legal/epl-2.0.
@@ -23,4 +23,8 @@
       <description>Keep a copy of the generated servlet class' java code.</description>
     </property>
   </jsp-config>
+  <context-param>
+    <param-name>jspCompilerOptions</param-name>
+    <param-value>-Xlint:-options</param-value>
+  </context-param>
 </glassfish-web-app>
