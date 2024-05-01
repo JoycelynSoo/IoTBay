@@ -1,4 +1,12 @@
+<%-- 
+    Document   : home
+    Created on : 21 Mar 2024, 9:15:50 pm
+    Author     : joycelyn.soo
+--%>
+
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="beans.User"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,20 +21,28 @@
         <div class="nav-bar">
             <!-- Centered Logo -->
             <div class="logo">
-                <a href="main.jsp"><img src="CSS/IoTBay.png" alt="Main" class="logo"></a>
+                <a href="home.jsp"><img src="CSS/IoTBay.png" alt="Main" class="logo"></a>
             </div>
             <!-- Account Management Icons -->
-            <div class="account-mgmt">
-                <a href="account.jsp"><img src="CSS/userwhite.png" alt="Main"></a>
-                <a href="cart.jsp"><img src="CSS/carticon.png" alt="Cart"></a>
-            </div>
+
+                <table class="account-mgmt">
+                    <tr>
+                      <td>
+                        <a href="login.jsp"><img src="CSS/account.png" alt="account"></a>
+                      </td>
+                      <td>
+                        <a href="cart.jsp"><img src="CSS/shoppingcart.png" alt="cart"></a>
+                      </td>
+                    </tr>
+                  </table>
         </div>
         <!-- Browse Bar -->
         <div class="browse-bar">
-            <a href="smart-home.jsp">Smart Home</a>
-            <a href="SnS.jsp">Security & Surveillance</a>
-            <a href="entertainment.jsp">Entertainment</a>
+            <a href="SMH.jsp">Smart Home</a>
+            <a href="SS.jsp">Security & Surveillance</a>
+            <a href="ENT.jsp">Entertainment</a>
             <a href="HnW.jsp">Health & Wellness</a>
+            <a href="other.jsp">Other</a>
         </div>
     </header>
     
@@ -71,9 +87,6 @@
                             <a href="home.jsp">Home</a>
                         </td>
                         <td>
-                            <a href="main.jsp">Main</a>
-                        </td>
-                        <td>
                             <a href="register.jsp">Register</a>
                         </td>
                         <td>
@@ -86,3 +99,4 @@
 
 </body>
 </html>
+
