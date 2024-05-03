@@ -11,7 +11,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="CSS/styleSheet.css">
-    <title> Login Page </title>
+    <title> Cancel Registration Page </title>
     <header>
         <div class="nav-bar">
             <!--centered-logo-->
@@ -39,8 +39,8 @@
         </div>
     </header>
 </head>
-<body class="login_body1" onload="startTime()">
-<div class ="login_body">
+<body class="welcome_body1" onload="startTime()">
+<div class ="welcome_body">
 
     <%
         String existErr = (String) session.getAttribute("existErr");
@@ -49,25 +49,12 @@
 
     %>
 
-<form class="login_form" action="LoginServlet" method="post">
-    <h1 class="login_title" >Login <%= (existErr != null ? existErr : "") %> </h1>
-    <table class ="login_input_box" >
-        <tr><td><input type="text" placeholder="<%= (emailErr != null ? emailErr : "Enter email") %>" name="email" required></td></tr> 
-        <tr><td><input type="password" placeholder="<%= (passErr != null ? passErr : "Enter password") %>" name="password" required></td></tr>            
-    </table>
+<form class="login_form" action="home.jsp">
+    <h1 class="login_title" >Your account has been cancelled successfully </h1>
     <div class="login_check">
-     <a><button class="login_button">Login</button></a>
+     <a><button class="login_button">Go back to Home page</button></a>
     </div>
    
-    <div class="login_go_back_to_register"
-        <p class="login_register"> Don't have an account?
-            <a href="register.jsp" class="login_register_link"> Register</a>
-        </p>
-
-        <p>
-            <a href ="home.jsp" class="login_register_link"> Go back to home page </a> 
-        </p>
-    </div>
 </form>
  </div>
     <footer>

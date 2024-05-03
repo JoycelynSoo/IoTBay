@@ -11,6 +11,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="CSS/styleSheet.css">
+        <script type="text/javascript" src="js/script.js"></script>
 
         <title>Welcome</title>
             
@@ -42,62 +43,50 @@
       </header>
     </head>   
     
-    <body class="welcome_body1">
+    <body class="welcome_body1" onload="startTime()">
     <div class ="welcome_body">
     
     <div class="welcome_box" >            
         <% 
-            String firstName = request.getParameter("firstName");
-            String lastName = request.getParameter("lastName");
-            String email = request.getParameter("email");
-            String dob = request.getParameter("dob");
-            String password = request.getParameter("password");
+            User user = (User) session.getAttribute("user");
+            session.setAttribute("user", user);
          %>
-         <div class="welcome_container">
+  <div class="welcome_container">
             <div class ="welcome_form">             
                 <div class="welcome_title">
                    <img src="CSS/icon.webp" alt=Profile class="welcome_ProfilePic" >
-                    <% if (firstName == null) { %>
-                        <h1>Welcome Back Again</h1>
-                    <% } else { %>
-                        <h1>Welcome</h1>
-                    <% } %>
-                    <% if (firstName != null) { %>
-                        <h1><%= firstName %></h1>
-                    <% } %>
-                   <% if (lastName != null) { %>
-                    <h1><%= lastName %></h1>
-                     <% } %>
+                        <h1>Welcome  <%= ((User) session.getAttribute("user")).getFirstName() %>! </h1>
                 </div>
              
         <div class="welcome_personalinfo">
             <h1>Personal Information</h1>
-            <% if (firstName != null) { %>
-                <h2 class="welcome_fields">your first name is</h2> 
-                <h2 class="welcome_fields"><%= firstName %></h2>
-            <% } %>
+                <h2 class="welcome_fields">Your first name is</h2> 
+                <h2 class="welcome_fields"> <%= ((User) session.getAttribute("user")).getFirstName() %> </h2>
             <br>
-            <% if (lastName != null) { %>
                 <h2 class="welcome_fields">Your last name is</h2>
-                <h2 class="welcome_fields"><%= lastName %></h2>
-            <% } %>
+                <h2 class="welcome_fields"> <%= ((User) session.getAttribute("user")).getLastName() %> </h2>
             <br>
-            <% if (email != null) { %>
                 <h2 class="welcome_fields">Your email is</h2>
-                <h2 class="welcome_fields"><%= email %></h2>
-            <% } %>
+                <h2 class="welcome_fields"><%= ((User) session.getAttribute("user")).getEmail() %></h2>
             <br>
-            <% if (dob != null) { %>
                 <h2 class="welcome_fields">Your DOB is</h2> 
-                <h2 class="welcome_fields"><%= dob %></h2>
-            <% } %>
+                <h2 class="welcome_fields"><%= ((User) session.getAttribute("user")).getDob() %></h2>
+            <br>
+                <h2 class="welcome_fields">Your password is</h2> 
+                <h2 class="welcome_fields"><%= ((User) session.getAttribute("user")).getPassword() %></h2>
         </div>
-            </div>
+        </div>
+            <form action="edit.jsp">
+                <div class="login_check">
+                <input action="edit.jsp" class="login_button" type ="submit" value ="Edit details">
+                </div> 
+            </form>
             <form action="main.jsp">
                 <div class="login_check">
                 <input action="main.jsp" class="login_button" type ="submit" value ="Main Page">
                 </div>   
             </form> 
+         </div>
          </div>
     </div>
     </div>
@@ -108,11 +97,6 @@
                 </p>
             </div>
         </footer>
-     
-     <%
-         User user = new User(firstName, lastName, email, dob, password);
-         session.setAttribute("user", user);
-     %>
     </body>
     
 

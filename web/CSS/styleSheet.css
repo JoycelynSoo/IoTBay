@@ -6,6 +6,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     Created on : 22 Mar 2024, 12:15:44 am
     Author     : joycelyn.soo
 */
+
+
+
 /* Home page*/
 .image-container {
     position: relative;
@@ -167,8 +170,41 @@ body.home_body {
     letter-spacing: 1px; 
     margin-left: 2px;
     margin-top:10px;
+    background-color: transparent;
+}
+.welcome_text{
+    color:whitesmoke;
+    font-family : "Roberto", sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px; 
+    margin-left: 2px;
+    margin-top:10px;
+    background-color: transparent;
 }
 
+.welcome_text{
+    width: 100%;
+    height:40px;
+    margin: 30px 0; 
+    
+}
+
+.hi input {
+    border: none;
+    outline: none; 
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px; 
+    /* text inside the input box ie the placeholder  */
+    font-size: 18px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+
+}
+
+.login_input_box input::placeholder { /* text that the user types in */
+    color: white;
+
+}
 /* Login + Register Page */
 *{
     margin: 0;
@@ -177,7 +213,9 @@ body.home_body {
     font-weight: bold;
     font-family: monospace;
 }
-
+.login_check{
+    margin-bottom: 10px;
+}
 .login_body{
     display:flex;
     justify-content: center; /* puts it in the top centre */
@@ -266,6 +304,51 @@ body.home_body {
     color: #00ffff;
 }
 
+/* DROPDOWN select in register page */
+
+select {
+  appearance: none;
+  outline: 10px red;
+  border: 0;
+  box-shadow: none;
+  
+  flex: 1;
+  padding: 1em;
+  color: #fff;
+  background-color: var(--darkgray);
+  background-image: none;
+  cursor: pointer;
+ font-size: 18px;
+
+}
+.select {
+  position: relative;
+  display: flex;
+  height: 60px;
+  border-radius: .25em;
+  overflow: hidden;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  font-size: 20px;
+  right: 0;
+  padding: 1em;
+  transition: .25s all ease;
+  pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
+
+.container {
+  background:transparent; 
+  border-radius: 40px;
+  border: 2px solid rgba(255, 255, 255, .2);
+}
 
 
 
@@ -677,3 +760,5 @@ footer {
     background-color: #123157;
     color: #00ffff;
 } 
+
+/*cancelRegistration Page*/
