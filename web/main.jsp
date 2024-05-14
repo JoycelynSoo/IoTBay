@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="beans.User"%>
+<%@page import="beans.Shipment"%>
 
 <!DOCTYPE html>
 <html>
@@ -20,13 +21,13 @@
             <div class="nav-bar">
                 <!--centered-logo-->
                 <div class="logo">
-                    <a href="main.jsp"><img src="CSS/IoTBay.png" alt=Main class="logo"></a>
+                    <a href="home.jsp"><img src="CSS/IoTBay.png" alt=Main class="logo"></a>
                 </div>
 
                 <table class="account-mgmt">
                     <tr>
                       <td>
-                        <a href="account.jsp"><img src="CSS/account.png" alt="account"></a>
+                        <a href="viewShipment.jsp"><img src="CSS/account.png" alt="account"></a>
                       </td>
                       <td>
                         <a href="cart.jsp"><img src="CSS/shoppingcart.png" alt="cart"></a>
@@ -35,13 +36,14 @@
                   </table>
             </div>
 
-            <div class="browse-bar">
-                <a href="smart-home.jsp">Smart Home</a>
-                <a href="SnS.jsp">Security & Surveillance</a>
-                <a href="entertainment.jsp">Entertainment</a>
-                <a href="HnW.jsp">Health & Wellness</a>
-                <a href="other.jsp">Other</a>
-            </div>
+        <!-- Browse Bar -->
+        <div class="browse-bar">
+            <a href="SMH.jsp">Smart Home</a>
+            <a href="SS.jsp">Security & Surveillance</a>
+            <a href="ENT.jsp">Entertainment</a>
+            <a href="HnW.jsp">Health & Wellness</a>
+            <a href="other.jsp">Other</a>
+        </div>
         </header>
 
         <div class="account-content-bg"></div>
@@ -55,7 +57,7 @@
      
             <table class="profile-details">
                 <tr>
-                    <td class="profile-detail">First Name:</td>
+                    <td class="profile-detail">First Name:</td> 
                     <td class="profile-detail-input">${user.firstName}</td>
                     <td class="profile-detail">Last Name:</td>
                     <td class="profile-detail-input">${user.lastName}</td>
@@ -164,28 +166,7 @@
                 <p>
                     IoTBay©
                 </p>
-
-                <table class="footer-links">
-                    <tr>
-                        <td>
-                            <a href="home.jsp">Home</a>
-                        </td>
-                        <td>
-                            <a href="main.jsp">Main</a>
-                        </td>
-                        <td>
-                            <a href="welcome.jsp">Welcome</a>
-                        </td>
-                        <td>
-                            <a href="register.jsp">Register</a>
-                        </td>
-                        <td>
-                            <a href="login.jsp">Login</a>
-                        </td>
-                    </tr>
-                </table>
             </div>
         </footer>
     </body>
 </html>
-
