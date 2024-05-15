@@ -761,4 +761,10 @@ footer {
     color: #00ffff;
 } 
 
-/*cancelRegistration Page*/
+/*AccessLog Page*/
+#logTable {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin-top: 25px;
+}
