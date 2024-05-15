@@ -8,16 +8,38 @@
 <%@page import="beans.User"%>
 <!DOCTYPE html>
 <html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="CSS/styleSheet.css">
-    <title> Register Page </title>
-    <header>
-        <div class="nav-bar">
-            <!--centered-logo-->
-            <div class="logo">
-                <a href="home.jsp"><img src="CSS/IoTBay.png" alt=Main class="logo"></a>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="CSS/styleSheet.css">
+        <title> Register Page </title>
+              <header>
+            <div class="nav-bar">
+                <!--centered-logo-->
+                <div class="logo">
+                    <a href="home.jsp"><img src="CSS/IoTBay.png" alt=Main class="logo"></a>
+                </div>
+
+                <table class="account-mgmt">
+                    <tr>
+                      <td>
+                        <a href="login.jsp"><img src="CSS/account.png" alt="account"></a>
+                      </td>
+                      <td>
+                        <a href="cart.jsp"><img src="CSS/shoppingcart.png" alt="cart"></a>
+                      </td>
+                    </tr>
+                  </table>
             </div>
+        <!-- Browse Bar -->
+        <div class="browse-bar">
+            <a href="SMH.jsp">Smart Home</a>
+            <a href="SS.jsp">Security & Surveillance</a>
+            <a href="ENT.jsp">Entertainment</a>
+            <a href="HnW.jsp">Health & Wellness</a>
+            <a href="other.jsp">Other</a>
+        </div>
+      </header>
 
             <table class="account-mgmt">
                 <tr>

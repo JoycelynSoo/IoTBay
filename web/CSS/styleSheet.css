@@ -760,11 +760,3 @@ footer {
     background-color: #123157;
     color: #00ffff;
 } 
-
-/*AccessLog Page*/
-#logTable {
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
-  margin-top: 25px;
-}
