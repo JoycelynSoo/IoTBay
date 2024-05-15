@@ -25,7 +25,7 @@
 <body class="shipment-body">
     <header>
         <div class="shipment-header">
-                <a href="main.jsp">close</a>
+                <a href="viewShipment.jsp">close</a>
 
                 <h1>Your Shipment Details</h1>
 
@@ -58,9 +58,9 @@
                     <th>
                         <a href="updateShipment.jsp?orderID=<%= ORDERID %>">edit</a>
                         
-                        <form action="deleteShipmentProcess.jsp" method="post">
+                        <form action="deleteShipmentProcess.jsp" method="post" class="deleteBtn">
                             <input type="hidden" name="shipmentID" value="<%= SHIPMENTID %>">
-                            <input type="submit" value="Delete">
+                            <input type="submit" value="delete">
                         </form>
                     </th>
                 </tr>

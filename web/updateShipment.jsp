@@ -15,54 +15,83 @@
     rs.next();
 
     String method = rs.getString("method");
-    String address = rs.getString("address");
+    String fullAddress = rs.getString("address");
+    
+    String[] addressComponents = fullAddress.split(", ");
+    String street = addressComponents[0];
+    String suburb = addressComponents[1];
+    String postcode = addressComponents[2];
+    String state = addressComponents[3];
+    String country = addressComponents[4];
 %>
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="CSS/styleSheet.css">
-        <title>Edit Shipment</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="CSS/styleSheet.css">
+    <title>Edit Shipment</title>
+</head>
     
-    <body class="shipment-body">
-        <header>
-            <div class="shipment-header">
-                <a href="main.jsp">exit</a>
+<body class="shipment-body">
+    <header>
+        <div class="shipment-header">
+            <a href="main.jsp">exit</a>
 
-                <h1>Editing Order #<%= orderID %></h1>
+            <h1>Editing Order #<%= orderID %></h1>
                 
-                <br></br>
-            </div>
-        </header>
-
-        <div class="ship-update-content">
-            <form action="updateShipmentProcess.jsp" method="POST">
-                <input type="hidden" name="orderID" value="<%= orderID %>">
-                
-                <label for="method">Shipment Method:</label>
-                <select id="method" name="method">
-                    <option value="click_and_collect">Click and Collect</option>
-                    <option value="delivery">Delivery</option>
-                </select>
-
-                <br><br>
-
-
-                <label for="address">Address:</label>
-                <input type="text" id="address" name="address" value="<%= address %>"><br><br>
-
-                <input type="submit" value="Update">
-            </form>
+            <br></br>
         </div>
+    </header>
 
-        <footer class="shipment-footer">
-            <div class="ship-footer">
-                <p>
-                    IoTBay©
-                </p>
-            </div>
-        </footer>
-    </body>
+    <div class="ship-update-content">
+        <form action="updateShipmentProcess.jsp" method="POST">
+            <input type="hidden" name="orderID" value="<%= orderID %>">
+            
+            <table>
+                <tr>
+                    <td><label for="method">Shipment Method:</label></td>
+                    <td>
+                        <select id="method" name="method">
+                            <option value="click_and_collect" <%= method.equals("click_and_collect") ? "selected" : "" %>>Click and Collect</option>
+                            <option value="delivery" <%= method.equals("delivery") ? "selected" : "" %>>Delivery</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="street">Street:</label></td>
+                    <td><input type="text" id="street" name="street" value="<%= street %>"></td>
+                </tr>
+                <tr>
+                    <td><label for="suburb">Suburb:</label></td>
+                    <td><input type="text" id="suburb" name="suburb" value="<%= suburb %>"></td>
+                </tr>
+                <tr>
+                    <td><label for="postcode">Postcode:</label></td>
+                    <td><input type="text" id="postcode" name="postcode" value="<%= postcode %>"></td>
+                </tr>
+                <tr>
+                    <td><label for="state">State:</label></td>
+                    <td><input type="text" id="state" name="state" value="<%= state %>"></td>
+                </tr>
+                <tr>
+                    <td><label for="country">Country:</label></td>
+                    <td><input type="text" id="country" name="country" value="<%= country %>"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Update"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <footer class="shipment-footer">
+        <div class="ship-footer">
+            <p>
+                IoTBay©
+            </p>
+        </div>
+    </footer>
+</body>
 </html>
