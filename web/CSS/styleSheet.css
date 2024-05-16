@@ -353,6 +353,7 @@ select {
 
 
 /*navigation bar */
+
 header {
     margin: 0;
     padding: 0;
@@ -480,7 +481,7 @@ header {
 
 .profile-buttons a {
     color: black;
-    padding: 20%;
+    padding: 10px 20px;
     font-weight: bold;
     font-family: sans-serif;
     text-decoration: none;
@@ -490,6 +491,14 @@ header {
     text-decoration: underline;
 }
 
+.main_logout {
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-decoration: none;
+}
 .promotional-link {
     background-image: url(promotional-banner.png);
     background-size: cover;

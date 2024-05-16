@@ -82,6 +82,11 @@
                 <input action="edit.jsp" class="login_button" type ="submit" value ="Edit details">
                 </div> 
             </form>
+            <form action="accessLogs.jsp"  method="post">
+                    <div class="login_check">
+                    <input class="login_button" type ="submit" value ="View Access Logs">
+                    </div>   
+            </form>
             <form action="main.jsp">
                 <div class="login_check">
                 <input action="main.jsp" class="login_button" type ="submit" value ="Main Page">

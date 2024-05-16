@@ -61,7 +61,16 @@
             <servlet-name>CancelRegistrationServlet</servlet-name>
             <url-pattern>/CancelRegistrationServlet</url-pattern>
         </servlet-mapping>
-                       <session-config>
+        
+        <servlet>
+            <servlet-name>LogoutServlet</servlet-name>
+            <servlet-class>beans.controller.LogoutServlet</servlet-class>
+        </servlet>
+        <servlet-mapping>
+            <servlet-name>LogoutServlet</servlet-name>
+            <url-pattern>/LogoutServlet</url-pattern>
+        </servlet-mapping>
+        <session-config>
 
            <session-timeout>
 

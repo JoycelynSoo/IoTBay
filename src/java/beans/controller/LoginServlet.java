@@ -1,5 +1,6 @@
 package beans.controller;
 
+import java.sql.Timestamp;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -44,6 +45,7 @@ public class LoginServlet extends HttpServlet {
                 //if user is found in database, proceed to welcome page. Else, error message prints
                 if (user != null) {
                     session.setAttribute("user", user);
+                    logAccess(user.getEmail());
                     request.getRequestDispatcher("welcome.jsp").include(request, response); 
                 } else {
                     session.setAttribute("existErr", "User credentials are invalid!");
@@ -54,6 +56,17 @@ public class LoginServlet extends HttpServlet {
             } catch (SQLException | NullPointerException | ClassNotFoundException ex) {
                 Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
             }
+        }
+    }
+    
+     private void logAccess(String email) throws ServletException, IOException, ClassNotFoundException, SQLException {
+        DBConnector connector = new DBConnector(); 
+        Connection conn = connector.openConnection();
+        DBManager db = new DBManager(conn);
+        try {
+            db.addLog(email, new Timestamp(System.currentTimeMillis()));
+        } catch (SQLException ex) {
+            Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }
