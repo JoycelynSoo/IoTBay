@@ -422,6 +422,7 @@ header {
     color: #00ffff;
 }
 /* Main Page */
+
 .account-content-bg {
     background-color: whitesmoke;
     border: 15px solid #123157;
@@ -475,6 +476,7 @@ header {
 }
 
 .profile-buttons {
+    top: -20px;
     position: relative;
     float: right;
 }
@@ -483,6 +485,7 @@ header {
     color: black;
     padding: 10px 20px;
     font-weight: bold;
+    font-size:20px;
     font-family: sans-serif;
     text-decoration: none;
 }
@@ -494,10 +497,15 @@ header {
 .main_logout {
     color: black;
     border: none;
+    font-size:20px;
     padding: 10px 20px;
     font-weight: bold;
     font-family: sans-serif;
     text-decoration: none;
+    background-color: transparent; 
+}
+.main_logout:hover {
+    text-decoration: underline; /* Underline on hover */
 }
 .promotional-link {
     background-image: url(promotional-banner.png);
