@@ -15,11 +15,12 @@ import java.util.ArrayList;
 
 public class DBManager {
 
-private Statement st;
+private final Statement st;
    
 public DBManager(Connection conn) throws SQLException {       
    st = conn.createStatement();   
 }
+// ======================CRUD ONLINE ACCESS MANAGEMENT======================
 
 //Find user by email and password in the database   
 public User findUser(String email, String password) throws SQLException {       
@@ -91,4 +92,31 @@ public boolean checkUser(String email, String password) throws SQLException{
     }
     return false; 
 }
+
+// ======================CRUD USER ACCESS LOGS======================
+public void addLogout(String customerEmail, Timestamp logoutTime, Timestamp loginTime) throws SQLException {
+    String query = ("UPDATE APP.ACCESSLOGS SET ACCESSLOGS_LOGOUT_TIME ='" + logoutTime + "' WHERE CUSTOMER_EMAIL='" + customerEmail +"' AND ACCESSLOGS_LOGIN_TIME='"+ loginTime + "'"); 
+    st.executeUpdate(query); 
+}
+public void addLog(String customerEmail, Timestamp loginTime) throws SQLException {
+    String query = "INSERT INTO APP.ACCESSLOGS (CUSTOMER_EMAIL, ACCESSLOGS_LOGIN_TIME) VALUES ('"+customerEmail+"', '"+loginTime+"')"; 
+    st.executeUpdate(query); 
+    }
+
+public void insertLogoutTime(String customerEmail, Timestamp logoutTime) throws SQLException {
+    String checkQuery = "SELECT * FROM APP.ACCESSLOGS WHERE CUSTOMER_EMAIL = '" + customerEmail + "' AND ACCESSLOGS_LOGOUT_TIME IS NULL";
+    
+    ResultSet result = st.executeQuery(checkQuery);
+
+    if (result.next()) {
+        String loginTime = result.getTimestamp("ACCESSLOGS_LOGIN_TIME").toString(); // Assuming column name is ACCESSLOGS_LOGIN_TIME
+        String updateQuery = "UPDATE APP.ACCESSLOGS SET ACCESSLOGS_LOGOUT_TIME = '" + logoutTime + "' WHERE CUSTOMER_EMAIL = '" + customerEmail + "' AND ACCESSLOGS_LOGIN_TIME = '" + loginTime + "'";
+        
+        st.executeUpdate(updateQuery);
+    }
+}
+
+
+
+  
 }

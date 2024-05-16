@@ -17,6 +17,7 @@ import beans.User;
 import beans.dao.DBConnector;
 import beans.dao.DBManager;
 import java.sql.Connection;
+import java.sql.Timestamp;
 
 public class RegisterServlet extends HttpServlet {
     @Override
@@ -56,6 +57,7 @@ public class RegisterServlet extends HttpServlet {
                 } else {
                     db.addUser(firstName, lastName, email, dob, password);
                     User createUser = new User(firstName, lastName, email, dob, password); 
+                    logAccess(email);
                     session.setAttribute("user", createUser);
                     request.getRequestDispatcher("welcome.jsp").include(request, response); 
                 }
@@ -64,6 +66,16 @@ public class RegisterServlet extends HttpServlet {
             } catch (SQLException | NullPointerException | ClassNotFoundException ex) {
                 Logger.getLogger(RegisterServlet.class.getName()).log(Level.SEVERE, null, ex);
             }
+        }
+    }
+   private void logAccess(String email) throws ServletException, IOException, ClassNotFoundException, SQLException {
+        DBConnector connector = new DBConnector(); 
+        Connection conn = connector.openConnection();
+        DBManager db = new DBManager(conn);
+        try {
+            db.addLog(email, new Timestamp(System.currentTimeMillis()));
+        } catch (SQLException ex) {
+            Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }

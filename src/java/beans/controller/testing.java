@@ -5,7 +5,8 @@
 
 package beans.controller;
 
- 
+ import java.sql.Timestamp;
+
 
 import beans.dao.DBConnector;
 import beans.dao.DBManager;
@@ -31,7 +32,18 @@ Connection conn = connector.openConnection();
 
 DBManager db = new DBManager(conn);
 
- 
+
+System.out.print("User email: ");
+
+String email = in.nextLine();
+
+System.out.print("User login time: ");
+
+String inputTime = in.nextLine(); 
+Timestamp time = Timestamp.valueOf(inputTime);
+
+db.insertLogoutTime(email, time);
+ /*
 
 System.out.print("User email: ");
 
@@ -56,7 +68,7 @@ String dob = in.nextLine();
 db.updateUser(firstName, lastName, email, dob, password);
 System.out.println("User updated!");
 connector.closeConnection();
-
+*/
  
 
 } catch (ClassNotFoundException | SQLException ex) {

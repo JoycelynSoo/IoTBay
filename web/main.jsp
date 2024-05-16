@@ -72,9 +72,14 @@
                     <td>
                         <a href="edit.jsp">edit</a>
                     </td>
+            <form action="LogoutServlet" method="post">
+
                     <td>
-                        <a href="logout.jsp">logout</a>
+                        <form action="LogoutServlet" method="post">
+                        <input class = "main_logout" type="submit" value="Logout">
+                        </form>
                     </td>
+            </form> 
                 </tr>
             </table>
         </div>
