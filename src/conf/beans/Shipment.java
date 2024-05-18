@@ -1,34 +1,35 @@
 package beans;
+import java.sql.*;
 
 public class Shipment {
-    private String shipmentId;
-    private String orderId;
+    private int shipmentId;
+    private String shipmentStatus;
     private String shipmentMethod;
-    private String shipmentDate;
+    private Date shipmentDate;
     private String shipmentAddress;
-
-    public Shipment(String shipmentId, String orderId, String shipmentMethod, String shipmentDate, String shipmentAddress) {
+        
+    public Shipment(int shipmentId, String shipmentStatus, String shipmentMethod, Date shipmentDate, String shipmentAddress) {
         this.shipmentId = shipmentId;
-        this.orderId = orderId;
+        this.shipmentStatus = shipmentStatus;
         this.shipmentMethod = shipmentMethod;
         this.shipmentDate = shipmentDate;
         this.shipmentAddress = shipmentAddress;
     }
 
-    public String getShipmentId() {
+    public int getShipmentId() {
         return shipmentId;
     }
 
-    public void setShipmentId(String shipmentId) {
+    public void setShipmentId(int shipmentId) {
         this.shipmentId = shipmentId;
     }
-
-    public String getOrderId() {
-        return orderId;
+    
+    public String getShipmentStatus() {
+        return shipmentStatus;
     }
 
-    public void setOrderId(String orderId) {
-        this.orderId = orderId;
+    public void setShipmentStatus(String shipmentStatus) {
+        this.shipmentStatus = shipmentStatus;
     }
     
     public String getShipmentMethod() {
@@ -39,11 +40,11 @@ public class Shipment {
         this.shipmentMethod = shipmentMethod;
     }
 
-    public String getShipmentDate() {
+    public Date getShipmentDate() {
         return shipmentDate;
     }
 
-    public void setShipmentDate(String shipmentDate) {
+    public void setShipmentDate(Date shipmentDate) {
         this.shipmentDate = shipmentDate;
     }
 
