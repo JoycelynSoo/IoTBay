@@ -186,3 +186,98 @@
     font-size: 15px;
     padding: 1px;
 }
+
+.main-header {
+    margin: 0;
+    padding: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0e2745;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    margin: 5px;
+}
+
+.logo img {
+    margin-left: 15px;
+    width: 300px
+}
+
+.account-mgmt {
+    margin-right: 20px;
+    border-collapse: collapse;
+}
+
+.account-mgmt td {
+    vertical-align: middle;
+    padding: 5px;
+}
+
+.account-mgmt img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0px 5px;
+}
+
+
+
+
+/*account drop down menu*/
+.account-img {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.account-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.account-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.account-dropdown-content a {
+  color: black;
+  font-family: Verdana;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 10px;
+}
+
+.account-dropdown-content a:hover {
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+.account-dropdown:hover .account-dropdown-content {
+    display: block;
+    border-radius: 10px;
+}
+
+.account-dropdown:hover .account-img {
+    border-radius: 10px;
+    background-color: #123157;
+}
