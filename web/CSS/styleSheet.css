@@ -7,7 +7,136 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     Author     : joycelyn.soo
 */
 
+/* Payment page*/
 
+.paymentContainer {
+    display: flex;
+    justify-content: center;   
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 150px;
+    text-align: center;
+}
+
+.paymentContainer form {
+    width: 700px;
+    padding: 50px;
+    background: #DDDCDC;
+    border-radius: 5px;
+}
+
+.payment-row {
+    display: flex;
+    justify-content: space-around; /* Adjust as needed */
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Adjust the gap between columns */
+}
+
+.column h2 {
+    font-size: 20px;
+    color: #333; 
+    margin-bottom: 50px;
+}
+
+form .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.column {
+    flex-basis: 50%;
+}
+
+.column .paymentTitle {
+    font-size: 25px;
+    color: #000000 ;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box select,
+.input-box input {
+    color:black;
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #0E2745;
+    border-radius: 6px;
+    font-size: 17px;
+}
+
+.input-box span {
+    margin-bottom: 5px;
+    padding: 15px;
+    padding-bottom: 10px;
+}
+
+
+.flex {
+    display: flex;
+    gap: 15px;
+}
+
+.flex .input-box {
+    margin-top: 5px;
+}
+
+.submit_payment_button {
+   display: block; 
+   width: 100%;
+   text-align: center;
+   padding: 15px;
+   background-color: #00AB66;
+   color: white;
+   border: none;
+   margin-top: 20px;
+   cursor: pointer;
+   border-radius: 5px;
+   text-transform: uppercase;
+   transition: 0.3s;
+}
+
+.submit_payment_button:hover {
+    background: #306844;
+}
+
+.payment_button {
+    width: 100%; 
+    text-align: center; 
+}
+
+.buttonwidth {
+    display: block; 
+}
+
+h2.paymentTitleCenter {
+    text-align: center; 
+    width: fit-content;
+}
+
+.delete_payment_button {
+   display: block; 
+   width: 100%;
+   text-align: center;
+   padding: 15px;
+   background-color: #D22B2B ;
+   color: white;
+   border: none;
+   margin-top: 20px;
+   cursor: pointer;
+   border-radius: 5px;
+   text-transform: uppercase;
+   transition: 0.3s;
+}
+
+.delete_payment_button:hover {
+    background: #8B0000;
+}
 
 /* Home page*/
 .image-container {

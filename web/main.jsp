@@ -20,7 +20,7 @@
             <div class="nav-bar">
                 <!--centered-logo-->
                 <div class="logo">
-                    <a href="home.jsp"><img src="CSS/IoTBay.png" alt=Main class="logo"></a>
+                    <a href="main.jsp"><img src="CSS/IoTBay.png" alt=Main class="logo"></a>
                 </div>
 
                 <table class="account-mgmt">
