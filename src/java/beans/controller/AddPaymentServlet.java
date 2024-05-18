@@ -29,7 +29,7 @@ public class AddPaymentServlet extends HttpServlet {
         int cvv = Integer.valueOf(request.getParameter("paymentCVV"));
         double amount = Double.valueOf(request.getParameter("totalOrderAmount"));
         String paymentDate = request.getParameter("date"); 
-        String email = "john.doe@example.com";  // FIX THIS
+        String email = "john.doe@example.com";  // FIX THIS -
         validator.clear(session);
 
         try {
