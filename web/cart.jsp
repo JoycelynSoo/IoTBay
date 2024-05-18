@@ -106,7 +106,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
          <div class="nav-bar">
             <!-- Centered Logo -->
             <div class="logo">
@@ -144,7 +144,7 @@
   
     <main>
         
-        <a href="checkour.jsp" class="cta-link">Proceed to Checkout</a>
+        <a href="checkout.jsp" class="cta-link">Proceed to Checkout</a>
 
         
  <div id="cartTableContainer">

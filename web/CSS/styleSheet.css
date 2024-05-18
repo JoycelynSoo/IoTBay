@@ -354,7 +354,7 @@ select {
 
 /*navigation bar */
 
-header {
+.header {
     margin: 0;
     padding: 0;
     left: 0;
