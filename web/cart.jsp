@@ -110,7 +110,7 @@
          <div class="nav-bar">
             <!-- Centered Logo -->
             <div class="logo">
-                <a href="home.jsp"><img src="CSS/IoTBay.png" alt="Main" class="logo"></a>
+                <a href="main.jsp"><img src="CSS/IoTBay.png" alt="Main" class="logo"></a>
             </div>
             <!-- Account Management Icons -->
 
@@ -144,7 +144,12 @@
   
     <main>
         
+<<<<<<< HEAD
         <a href="checkout.jsp" class="cta-link">Proceed to Checkout</a>
+=======
+        <a href="checkour.jsp" class="cta-link">Proceed to Checkout</a>
+        <a href="payment.jsp" class="cta-link">Add payment method</a>
+>>>>>>> bd9d7ab107d9d7dc7d860a35f202741f77960031
 
         
  <div id="cartTableContainer">
