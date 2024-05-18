@@ -5,6 +5,7 @@
 package beans.dao;
 
 import beans.User;
+import java.math.BigDecimal;
 import java.sql.*;
 import java.util.ArrayList; 
 
@@ -93,16 +94,18 @@ public boolean checkUser(String email, String password) throws SQLException{
     return false; 
 }
 
-// ======================CRUD USER ACCESS LOGS======================
+//======================CRUD USER ACCESS LOGS======================
+//update logout log - this wasn't needed 
 public void addLogout(String customerEmail, Timestamp logoutTime, Timestamp loginTime) throws SQLException {
     String query = ("UPDATE APP.ACCESSLOGS SET ACCESSLOGS_LOGOUT_TIME ='" + logoutTime + "' WHERE CUSTOMER_EMAIL='" + customerEmail +"' AND ACCESSLOGS_LOGIN_TIME='"+ loginTime + "'"); 
     st.executeUpdate(query); 
 }
+// add login log 
 public void addLog(String customerEmail, Timestamp loginTime) throws SQLException {
     String query = "INSERT INTO APP.ACCESSLOGS (CUSTOMER_EMAIL, ACCESSLOGS_LOGIN_TIME) VALUES ('"+customerEmail+"', '"+loginTime+"')"; 
     st.executeUpdate(query); 
-    }
-
+}
+//update logout log 
 public void insertLogoutTime(String customerEmail, Timestamp logoutTime) throws SQLException {
     String checkQuery = "SELECT * FROM APP.ACCESSLOGS WHERE CUSTOMER_EMAIL = '" + customerEmail + "' AND ACCESSLOGS_LOGOUT_TIME IS NULL";
     
@@ -115,8 +118,22 @@ public void insertLogoutTime(String customerEmail, Timestamp logoutTime) throws 
         st.executeUpdate(updateQuery);
     }
 }
+//====================== PAYMENT=====================
 
+    public void addPayment(String paymentNameOnCard, String paymentCardNumber, int paymentExpiryMonth, 
+                   int paymentExpiryYear, int paymentCvv, double amount, String paymentDate, String customerEmail) throws SQLException {
 
+    
+    String query = "INSERT INTO APP.PAYMENT (PAYMENT_NAME_ON_CARD, PAYMENT_CARD_NUMBER , PAYMENT_EXPIRY_MONTH, PAYMENT_EXPIRY_YEAR, PAYMENT_CVV, AMOUNT, PAYMENT_DATE, CUSTOMER_EMAIL) VALUES (" + 
+                     "'" + paymentNameOnCard + "', " +  //quote
+                    "'"  + paymentCardNumber + "', " + //quote
+                        paymentExpiryMonth + ", " + 
+                        paymentExpiryYear + ", " + 
+                        paymentCvv + ", " + 
+                       amount + ", " +
+                        "'" + paymentDate + "', " + //quote
+                     "'" + customerEmail + "')"; //quote
 
-  
+            st.executeUpdate(query);
+    } 
 }

@@ -106,6 +106,10 @@
           margin-left: 1em;
           margin-bottom: 30px;
         }
+        #searchLogs {
+              text-align: center;
+              margin-bottom: 20px;
+          }
 
     </style>
 
@@ -116,7 +120,7 @@
          <div class="nav-bar">
             <!-- Centered Logo -->
             <div class="logo">
-                <a href="home.jsp"><img src="CSS/IoTBay.png" alt="Main" class="logo"></a>
+                <a href="main.jsp"><img src="CSS/IoTBay.png" alt="Main" class="logo"></a>
             </div>
             <!-- Account Management Icons -->
 
@@ -141,7 +145,6 @@
             <a href="HnW.jsp">Health & Wellness</a>
             <a href="other.jsp">Other</a>
         </div>
-        
 
         
         <h1>Access Logs </h1>
@@ -152,7 +155,10 @@
         
         <a href="main.jsp" class="cta-link"> Main Page</a>
         <a href="edit.jsp" class="cta-link"> Personal Details </a>
-
+        
+    </main>
+        
+    
         
  <div id="cartTableContainer">
     <table id="cartTable">
@@ -193,4 +199,3 @@
 </div>
        
 
-    </main>

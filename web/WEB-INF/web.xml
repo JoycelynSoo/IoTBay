@@ -70,6 +70,18 @@
             <servlet-name>LogoutServlet</servlet-name>
             <url-pattern>/LogoutServlet</url-pattern>
         </servlet-mapping>
+        
+        <servlet>
+        
+        <servlet-name>AddPaymentServlet</servlet-name>
+            <servlet-class>beans.controller.AddPaymentServlet</servlet-class>
+        </servlet>
+        <servlet-mapping>
+            <servlet-name>AddPaymentServlet</servlet-name>
+            <url-pattern>/AddPaymentServlet</url-pattern>
+        </servlet-mapping>
+        
+        
         <session-config>
 
            <session-timeout>
