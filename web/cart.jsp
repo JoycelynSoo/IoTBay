@@ -147,7 +147,7 @@
 <<<<<<< HEAD
         <a href="checkout.jsp" class="cta-link">Proceed to Checkout</a>
 =======
-        <a href="checkour.jsp" class="cta-link">Proceed to Checkout</a>
+        <a href="checkout.jsp" class="cta-link">Proceed to Checkout</a>
         <a href="payment.jsp" class="cta-link">Add payment method</a>
 >>>>>>> bd9d7ab107d9d7dc7d860a35f202741f77960031
 
