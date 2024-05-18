@@ -15,7 +15,7 @@
          <div class="nav-bar">
             <!-- Centered Logo -->
             <div class="logo">
-                <a href="home.jsp"><img src="CSS/IoTBay.png" alt="Main" class="logo"></a>
+                <a href="main.jsp"><img src="CSS/IoTBay.png" alt="Main" class="logo"></a>
             </div>
             <!-- Account Management Icons -->
 

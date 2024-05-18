@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-
 package beans.controller;
 
+import beans.Payment;
  import java.sql.Timestamp;
 
 
@@ -33,16 +33,36 @@ Connection conn = connector.openConnection();
 DBManager db = new DBManager(conn);
 
 
-System.out.print("User email: ");
 
-String email = in.nextLine();
 
-System.out.print("User login time: ");
+System.out.print("paymentNameOnCard: ");
+String paymentNameOnCard = in.nextLine();
 
-String inputTime = in.nextLine(); 
-Timestamp time = Timestamp.valueOf(inputTime);
+System.out.print("paymentCardNumber: ");
+String paymentCardNumber = in.nextLine();
 
-db.insertLogoutTime(email, time);
+System.out.print("paymentExpiryMonth: ");
+int paymentExpiryMonth = Integer.parseInt(in.nextLine());
+
+System.out.print("paymentExpiryYear: ");
+int paymentExpiryYear = Integer.parseInt(in.nextLine());
+
+System.out.print("paymentCVV: ");
+int paymentCVV = Integer.parseInt(in.nextLine());
+
+System.out.print("amt: ");
+double amount = Double.parseDouble(in.nextLine());
+
+System.out.print("date: ");
+java.util.Date paymentDate = new java.util.Date(System.currentTimeMillis());
+
+System.out.print("customerEmail: ");
+String customerEmail = in.nextLine();
+
+
+db.addPayment(paymentNameOnCard, paymentCardNumber, paymentExpiryMonth, paymentExpiryYear, paymentCVV, amount, paymentDate, customerEmail);
+
+
  /*
 
 System.out.print("User email: ");
