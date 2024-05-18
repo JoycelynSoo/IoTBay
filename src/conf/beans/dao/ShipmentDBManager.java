@@ -1,5 +1,5 @@
 package beans.dao;
-
+import java.util.Random;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -74,32 +74,6 @@ public class ShipmentDBManager {
         return shipment;
     }
     
-    public boolean createShipment(int shipmentID, String shipmentMethod, String shipmentAddress, Date shipmentDate) {
-        boolean shipmentCreated = false;
-        
-        try {
-            Class.forName("org.apache.derby.jdbc.ClientDriver");
-            Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-
-            String query = "INSERT INTO ROOT.SHIPMENTS (shipmentID, shipmentStatus, shipmentMethod, shipmentDate, shipmentAddress) VALUES (?, ?, ?, ?, ?)";
-            PreparedStatement pstmt = conn.prepareStatement(query);
-            pstmt.setInt(1, shipmentID);
-            pstmt.setString(2, "pending"); 
-            pstmt.setString(3, shipmentMethod.replace(" ", "_").toUpperCase());
-            pstmt.setDate(4, shipmentDate);
-            pstmt.setString(5, shipmentAddress);
-
-            int rowsAffected = pstmt.executeUpdate();
-            shipmentCreated = (rowsAffected > 0);
-
-            pstmt.close();
-            conn.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return shipmentCreated;
-    }
-    
     public boolean deleteShipment(int shipmentId) {
         try {
             Class.forName("org.apache.derby.jdbc.ClientDriver");
@@ -144,6 +118,36 @@ public class ShipmentDBManager {
             stmt.close();
             conn.close();
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public static void createShipment(Shipment shipment) {
+        try {
+            Class.forName("org.apache.derby.jdbc.ClientDriver");
+            Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+
+            Date currentDate = new Date(System.currentTimeMillis());
+
+            PreparedStatement stmt = conn.prepareStatement(
+                    "INSERT INTO ROOT.SHIPMENTS (shipmentId, shipmentStatus, shipmentMethod, shipmentDate, shipmentAddress) VALUES (?, ?, ?, ?, ?)");
+            stmt.setInt(1, shipment.getShipmentId());
+            stmt.setString(2, shipment.getShipmentStatus());
+            stmt.setString(3, shipment.getShipmentMethod());
+            stmt.setDate(4, currentDate);
+            stmt.setString(5, shipment.getShipmentAddress());
+
+            int rowsAffected = stmt.executeUpdate();
+
+            if (rowsAffected > 0) {
+                System.out.println("Shipment created successfully.");
+            } else {
+                System.out.println("Failed to create shipment.");
+            }
+
+            stmt.close();
+            conn.close();
+        } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
     }
