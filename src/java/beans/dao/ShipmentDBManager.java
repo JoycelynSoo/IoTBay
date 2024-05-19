@@ -16,7 +16,7 @@ public class ShipmentDBManager {
         
         try {
             Class.forName("org.apache.derby.jdbc.ClientDriver");
-            Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+          Connection conn = DriverManager.getConnection("jdbc:derby://localhost:1527/IOTBAY;create=true", "root", "root");
             System.out.println("Database connection successful.");
 
             Statement stmt = conn.createStatement();
@@ -37,7 +37,7 @@ public class ShipmentDBManager {
             rs.close();
             stmt.close();
             conn.close();
-        } catch (Exception e) {
+        } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
 
@@ -49,7 +49,7 @@ public class ShipmentDBManager {
         
         try {
             Class.forName("org.apache.derby.jdbc.ClientDriver");
-            Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+          Connection conn = DriverManager.getConnection("jdbc:derby://localhost:1527/IOTBAY;create=true", "root", "root");
             System.out.println("Database connection successful.");
 
             PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM APP.SHIPMENTS WHERE shipmentid = ?");
@@ -78,7 +78,7 @@ public class ShipmentDBManager {
     public boolean deleteShipment(int shipmentId) {
         try {
             Class.forName("org.apache.derby.jdbc.ClientDriver");
-            Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+          Connection conn = DriverManager.getConnection("jdbc:derby://localhost:1527/IOTBAY;create=true", "root", "root");
 
             PreparedStatement stmt = conn.prepareStatement("DELETE FROM APP.SHIPMENTS WHERE shipmentid = ?");
             stmt.setInt(1, shipmentId);
@@ -98,10 +98,10 @@ public class ShipmentDBManager {
     public static void updateShipment(Shipment shipment) {
         try {
             Class.forName("org.apache.derby.jdbc.ClientDriver");
-            Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+          Connection conn = DriverManager.getConnection("jdbc:derby://localhost:1527/IOTBAY;create=true", "root", "root");
 
             PreparedStatement stmt = conn.prepareStatement(
-                "UPDATE ROOT.SHIPMENTS SET shipmentStatus = ?, shipmentMethod = ?, shipmentDate = ?, shipmentAddress = ? WHERE shipmentId = ?");
+                "UPDATE APP.SHIPMENTS SET shipmentStatus = ?, shipmentMethod = ?, shipmentDate = ?, shipmentAddress = ? WHERE shipmentId = ?");
             stmt.setString(1, shipment.getShipmentStatus());
             stmt.setString(2, shipment.getShipmentMethod().replace(" ", "_").toUpperCase());
             stmt.setDate(3, shipment.getShipmentDate());
@@ -126,12 +126,12 @@ public class ShipmentDBManager {
     public static void createShipment(Shipment shipment) {
         try {
             Class.forName("org.apache.derby.jdbc.ClientDriver");
-            Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+          Connection conn = DriverManager.getConnection("jdbc:derby://localhost:1527/IOTBAY;create=true", "root", "root");
 
             Date currentDate = new Date(System.currentTimeMillis());
 
             PreparedStatement stmt = conn.prepareStatement(
-                    "INSERT INTO ROOT.SHIPMENTS (shipmentId, shipmentStatus, shipmentMethod, shipmentDate, shipmentAddress) VALUES (?, ?, ?, ?, ?)");
+                    "INSERT INTO APP.SHIPMENTS (shipmentId, shipmentStatus, shipmentMethod, shipmentDate, shipmentAddress) VALUES (?, ?, ?, ?, ?)");
             stmt.setInt(1, shipment.getShipmentId());
             stmt.setString(2, shipment.getShipmentStatus());
             stmt.setString(3, shipment.getShipmentMethod());

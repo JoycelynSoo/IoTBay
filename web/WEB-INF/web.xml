@@ -88,8 +88,14 @@
             <servlet-name>EditPaymentServlet</servlet-name>
             <url-pattern>/EditPaymentServlet</url-pattern>
         </servlet-mapping>
-        
-        
+                 <servlet>
+        <servlet-name>StaffServlet</servlet-name>
+            <servlet-class>beans.controller.StaffServlet</servlet-class>
+        </servlet>
+        <servlet-mapping>
+            <servlet-name>StaffServlet</servlet-name>
+            <url-pattern>/StaffServlet</url-pattern>
+        </servlet-mapping>
         <session-config>
 
            <session-timeout>
