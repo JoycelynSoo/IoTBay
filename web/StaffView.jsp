@@ -7,17 +7,15 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Staff List</title>
 </head>
-    <body>
-        <header>
-            <div class="nav-bar">
-                <!--centered-logo-->
-                <div class="logo">
-                    <img src="CSS/IoTBay.png" alt=Main class="logo">
-                </div>
-
+<body>
+    <header>
+        <div class="nav-bar">
+            <!--centered-logo-->
+            <div class="logo">
+                <img src="CSS/IoTBay.png" alt="Main" class="logo">
             </div>
-
-
+        </div>
+    </header>
 
     <h1>Staff List</h1>
     <table border="1">
@@ -47,6 +45,10 @@
                 <td><%= staff.getAddress() %></td>
                 <td><%= staff.getStatus() ? "Active" : "Inactive" %></td>
             </tr>
+            <%
+                    }
+                }
+            %>
         </tbody>
     </table>
 </body>
