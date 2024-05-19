@@ -498,7 +498,6 @@ select {
     justify-content: space-between;
     align-items: center;
     background-color: #0e2745;
-    overflow: hidden;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -514,6 +513,7 @@ select {
 }
 
 .account-mgmt {
+    color: black; 
     margin-right: 20px;
     border-collapse: collapse;
 }
@@ -536,6 +536,7 @@ select {
     width: 100%;
     margin: 0;
     padding: 15px;
+    z-index: 1;
 }
 
 .browse-bar a {
@@ -906,3 +907,369 @@ footer {
     background-color: #123157;
     color: #00ffff;
 } 
+
+/* Shipment */
+.shipment-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.shipment-header {
+    background-color: #0e2745;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ship-back-arrow {
+    width: 40px;
+    height: auto;
+    padding: 10px;
+}
+
+.ship-logo {
+    width: auto;
+    height: 70px;
+    padding: 10px;
+}
+
+.ship-header-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.ship-heading {
+    text-align: center;
+    font-family: monospace;
+    font-weight: bold;
+    background-color: #123157;
+    font-size: 12px;
+    padding: 1px;
+    color: whitesmoke;
+}
+
+.shipment-table {
+    margin: auto;
+    padding: 10px;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 90%;
+}
+
+.shipment-table th {
+    font-family: Verdana;
+    background-color: rgba(18, 49, 87, 0.9);
+    border: 3px solid #0e2745;
+    font-size: 18px;
+    padding: 20px;
+    color: whitesmoke;
+}
+
+.shipment-table td {
+    font-family: Verdana;
+    padding: 20px;
+    border: 3px solid #0e2745;
+    font-size: 13px;
+}
+
+.view-button {
+    font-family: Verdana;
+    border: 2px solid rgba(18, 49, 87, 0.9);
+    background-color: rgba(18, 49, 87, 0.9);
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+    text-decoration: none;
+    color: whitesmoke;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.view-button:hover {
+    background-color: whitesmoke;
+    border: 2px solid rgba(18, 49, 87, 0.9);
+    color: rgba(18, 49, 87, 0.9);
+}
+
+.ship-error-message {
+    text-align: center;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 18px;
+    color: red;
+}
+
+.ship-error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ship-error-confirm {
+    font-family: Verdana;
+    border: 3px solid rgba(18, 49, 87, 0.9);
+    background-color: whitesmoke;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px;
+    text-decoration: none;
+    color: rgba(18, 49, 87, 1);
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.ship-error-confirm:hover {
+    background-color: rgba(18, 49, 87, 1);
+    color: whitesmoke;
+}
+
+.ship-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.ship-buttons-container form {
+    margin: 0;
+}
+
+.ship-button {
+    font-family: Verdana;
+    border: 3px solid rgba(18, 49, 87, 0.9);
+    background-color: whitesmoke;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
+    color: rgba(18, 49, 87, 1);
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.ship-button:hover {
+    background-color: rgba(18, 49, 87, 1);
+    color: whitesmoke;
+}
+
+.shipment-table input[type="text"],
+.shipment-table input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+    border: 1px solid #0e2745;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    color: black;
+    font-family: Verdana;
+    font-size: 13px;
+}
+
+.shipment-table input[type="text"]:read-only,
+.shipment-table input[type="date"]:read-only {
+    background-color: rgba(137, 140, 143, 0.5);
+    color: black;
+}
+
+#shipmentMethod {
+    font-family: Verdana;
+    border: 3px solid rgba(18, 49, 87, 0.9);
+    background-color: whitesmoke;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
+    color: rgba(18, 49, 87, 1);
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 200px;
+}
+
+#shipmentMethod:hover {
+    background-color: rgba(18, 49, 87, 1);
+    color: whitesmoke;
+}
+
+.shipment-footer {
+    position: relative;
+    width: 100%;
+    background-color: #0e2745;
+    text-align: center;
+    padding: 10px; /* Adjust padding if needed */
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+.ship-footer p {
+    font-family: monospace;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 1px;
+}
+
+.main-header {
+    margin: 0;
+    padding: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+}
+
+/*account drop down menu*/
+.account-img {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.account-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.account-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 3;
+}
+
+.account-dropdown-content a {
+  color: black;
+  font-family: Verdana;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 10px;
+}
+
+.account-dropdown-content a:hover {
+    background-color: #ddd;
+    border-radius: 10px;
+    color: black;
+
+}
+
+.account-dropdown:hover .account-dropdown-content {
+    display: block;
+    border-radius: 10px;
+    color: black;
+}
+
+.account-dropdown:hover .account-img {
+    border-radius: 10px;
+    background-color: #123157;
+    color: black;
+
+}
+
+/* Access Logs */
+.cartTable {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.cartTable th,
+.cartTable td {
+  padding: 1em;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.cartTable th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.cartTable tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.cartTable .product-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cartTable .price,
+.cartTable .quantity,
+.cartTable .total {
+  text-align: right;
+}
+
+.cartTable .quantity input {
+  width: 50px;
+  text-align: center;
+}
+
+.cartTable .remove-cell {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.cartTable .remove-cell div {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #f00;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 10px;
+}
+
+.cartTable .remove-cell div:hover {
+  background-color: #f00;
+  color: #fff;
+}
+
+.cartTotal {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 1em;
+  text-align: right;
+}
+
+.cta-link,.check-link {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #00AB66;
+  color: #fff;
+  border: none;
+  border-radius: 0.25em;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: background-color 0.2s ease-in-out;
+  float: right;
+  margin-left: 1em;
+  margin-bottom: 30px;
+}
+searchLogs {
+      text-align: center;
+      margin-bottom: 20px;
+  }

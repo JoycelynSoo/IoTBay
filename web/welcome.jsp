@@ -24,8 +24,14 @@
 
                 <table class="account-mgmt">
                     <tr>
-                      <td>
-                        <a href="login.jsp"><img src="CSS/account.png" alt="account"></a>
+                    <td>
+                          <div class="account-dropdown">
+                        <a href="welcome.jsp"><img src="CSS/account.png" alt="account"></a>
+                            <div class="account-dropdown-content">
+                                <a href="shipments.jsp">Track Order</a>
+                                <a href="welcome.jsp">Details</a>
+                            </div>
+                          </div>
                       </td>
                       <td>
                         <a href="cart.jsp"><img src="CSS/shoppingcart.png" alt="cart"></a>
