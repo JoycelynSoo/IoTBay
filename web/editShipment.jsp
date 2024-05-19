@@ -72,7 +72,7 @@
                     </tr>
                     <tr>
                         <th style="text-align: left;"><label for="shipmentMethod">Shipment Method:</label></th>
-                        <td><input type="text" id="shipmentMethod" name="shipmentMethod" value="<%= shipment.getShipmentMethod() %>" readonly></td>
+                        <td><input type="text" name="shipmentMethod" value="<%= shipment.getShipmentMethod() %>" readonly></td>
                     </tr>
                     <tr>
                         <th style="text-align: left;"><label for="shipmentDate">Shipment Date:</label></th>
