@@ -60,7 +60,7 @@ System.out.print("customerEmail: ");
 String customerEmail = in.nextLine();
 
 
-db.addPayment(paymentNameOnCard, paymentCardNumber, paymentExpiryMonth, paymentExpiryYear, paymentCVV, amount, paymentDate, customerEmail);
+//db.addPayment(paymentNameOnCard, paymentCardNumber, paymentExpiryMonth, paymentExpiryYear, paymentCVV, amount, paymentDate, customerEmail);
 
 
  /*

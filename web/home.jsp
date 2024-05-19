@@ -28,8 +28,10 @@
                 <table class="account-mgmt">
                     <tr>
                       <td>
-                        <a href="login.jsp"><img src="CSS/account.png" alt="account"></a>
-                      </td>
+                        <div class="account-dropdown">
+                            <a href="login.jsp"><img src="CSS/account.png" alt="account"></a>
+                        </div>
+                          </td>
                       <td>
                         <a href="cart.jsp"><img src="CSS/shoppingcart.png" alt="cart"></a>
                       </td>

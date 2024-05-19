@@ -126,8 +126,9 @@
 
                 <table class="account-mgmt">
                     <tr>
-                      <td>
-                        <a href="login.jsp"><img src="CSS/account.png" alt="account"></a>
+                    <td>
+                        <a href="welcome.jsp"><img src="CSS/account.png" alt="account"></a>
+
                       </td>
                       <td>
                         <a href="cart.jsp"><img src="CSS/shoppingcart.png" alt="cart"></a>
