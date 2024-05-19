@@ -116,7 +116,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
          <div class="nav-bar">
             <!-- Centered Logo -->
             <div class="logo">

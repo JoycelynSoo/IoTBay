@@ -15,7 +15,7 @@
 
         <title>Welcome</title>
             
-          <header>
+          <header class="header">
             <div class="nav-bar">
                 <!--centered-logo-->
                 <div class="logo">
