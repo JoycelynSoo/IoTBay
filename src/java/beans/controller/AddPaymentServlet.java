@@ -1,6 +1,7 @@
 package beans.controller;
 
 import beans.Payment;
+import beans.User;
 import beans.dao.DBConnector;
 import beans.dao.DBManager;
 import jakarta.servlet.ServletException;
@@ -29,7 +30,8 @@ public class AddPaymentServlet extends HttpServlet {
         int cvv = Integer.parseInt(request.getParameter("paymentCVV"));
         double amount = Double.parseDouble(request.getParameter("totalOrderAmount"));
         String paymentDate = request.getParameter("date"); 
-        String email = "john.doe@example.com";  // FIX THIS -
+       User user = (User) session.getAttribute("user");
+       String email = user.getEmail();
         validator.clear(session);
 
         try {

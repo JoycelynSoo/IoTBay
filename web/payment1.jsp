@@ -41,7 +41,7 @@
 </header>
 <body> 
     <div class="paymentContainer">
-        <form id="paymentForm" action="EditPaymentServlet" method="post"> 
+        <form id="paymentForm"  > 
             <div class="row">     
                 
                 <% 
@@ -61,7 +61,7 @@
                         <input type="text" name= "cardNumber" value="<%=((Payment) session.getAttribute("payment")).getPaymentCardNumber() %> " readonly>   
                         
                     </div>
-                        
+                      
                     
                         <div class="input-box" >
                             <span>Expiry Month</span>
@@ -88,13 +88,15 @@
                         </a>
                     </div>
                     
+         
                     <div class="payment_button">
-                        <a  class="buttonwidth">
+                        <a href="paymentfinalise.jsp" class="buttonwidth">
                             <a href="paymentfinalise.jsp" class="submit_payment_button">Confirm</a>
                         </a>
                     </div>
+                    
                     <div class="row">  
-                    <div class="payent_button">
+                    <div class="payment_button">
                         <a href="paymentdelete.jsp" class="buttonwidth">
                             <a href ="paymentdelete.jsp" class="delete_payment_button">Delete Payment Details</a>
                         </a>

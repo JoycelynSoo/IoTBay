@@ -1,9 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package beans.controller;
 import beans.Payment;
+import beans.User;
 import beans.dao.DBConnector;
 import beans.dao.DBManager;
 import jakarta.servlet.ServletException;
@@ -16,7 +13,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+ 
 public class EditPaymentServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -27,18 +24,22 @@ public class EditPaymentServlet extends HttpServlet {
         int expMonth = Integer.parseInt(request.getParameter("paymentExpiryMonth"));
         int expYear = Integer.parseInt(request.getParameter("paymentExpiryYear"));
         int cvv = Integer.parseInt(request.getParameter("paymentCVV"));
-        double amount = Double.parseDouble(request.getParameter("totalOrderAmount"));
+        //double amount = Double.parseDouble(request.getParameter("totalOrderAmount"));
         String paymentDate = request.getParameter("date"); 
-        String email = "john.doe@example.com";  // FIX THIS -
+         paymentDate = "test";
+        User user = (User) session.getAttribute("user");
+        String email = user.getEmail();
+       
+        Payment payment = (Payment) session.getAttribute("payment");
+        double amount = payment.getAmount();
         validator.clear(session);
-        
         try {
             DBConnector connector = new DBConnector();
             Connection conn = connector.openConnection();
             DBManager db = new DBManager(conn);
-            
+           session.setAttribute("payment", payment);
             db.editPayment(nameOnCard, cardNumber, expMonth, expYear, cvv, amount, paymentDate, email);
-            Payment payment = new Payment(nameOnCard, cardNumber, expMonth, expYear, cvv, amount, paymentDate, email);
+            payment = new Payment(nameOnCard, cardNumber, expMonth, expYear, cvv, amount, paymentDate, email);
             session.setAttribute("payment", payment);
             request.getRequestDispatcher("paymentfinalise.jsp").forward(request, response);
                     } catch (SQLException | NullPointerException | ClassNotFoundException ex) {
@@ -51,10 +52,9 @@ public class EditPaymentServlet extends HttpServlet {
                             //handle invalid number format errors
                             session.setAttribute("error", "Invalid number format. Please check your input.");
                             request.getRequestDispatcher("paymentedit.jsp").forward(request,response);
-
+ 
             
                 }
-            
-            
+
           }
 }
