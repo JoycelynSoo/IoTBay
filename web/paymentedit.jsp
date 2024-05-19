@@ -41,7 +41,7 @@
 <body> 
 
             <div class="paymentContainer">
-                     <form id="paymentForm" action="createPayment" method="post"> 
+                     <form id="paymentForm" action="EditPaymentServlet" method="post"> 
             <div class="row">
                     
                    <h2 class="paymentTitleCenter"> Edit Payment Details </h2>

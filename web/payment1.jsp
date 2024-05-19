@@ -41,7 +41,7 @@
 </header>
 <body> 
     <div class="paymentContainer">
-        <form id="paymentForm" > 
+        <form id="paymentForm" action="EditPaymentServlet" method="post"> 
             <div class="row">     
                 
                 <% 
@@ -58,22 +58,22 @@
                     </div>
                     <div class="input-box" required>
                         <span>Card Number</span>
-                        <input type="number" name= "cardNumber" value="<%=((Payment) session.getAttribute("payment")).getPaymentCardNumber() %> " readonly>   
+                        <input type="text" name= "cardNumber" value="<%=((Payment) session.getAttribute("payment")).getPaymentCardNumber() %> " readonly>   
                         
                     </div>
                         
                     
                         <div class="input-box" >
                             <span>Expiry Month</span>
-                            <input type="number" name= "expiryMonth" value="<%=((Payment) session.getAttribute("payment")).getPaymentExpiryMonth() %> " readonly>
+                            <input type="text" name= "paymentExpiryMonth" value="<%=((Payment) session.getAttribute("payment")).getPaymentExpiryMonth() %> " readonly>
                         </div>
                         <div class="input-box" >
                             <span>Expiry Year</span>
-                            <input type="number" name= "expiryYear" value="<%=((Payment) session.getAttribute("payment")).getPaymentExpiryYear() %> " readonly>
+                            <input type="text" name= "expYear" value="<%=((Payment) session.getAttribute("payment")).getPaymentExpiryYear() %> " readonly>
                         </div>
                         <div class="input-box" >
                             <span> CVV </span>
-                            <input type="number" name= "cvv" value="<%=((Payment) session.getAttribute("payment")).getPaymentCvv() %> " readonly>
+                            <input type="text" name= "paymentCvv" value="<%=((Payment) session.getAttribute("payment")).getPaymentCvv() %> " readonly>
                         </div>
                     
                     <div class="input-box">
@@ -82,8 +82,7 @@
                     </div>
                 
                 </div>
-                    
-                    <div class="payment_button">
+                  <div class="payment_button">
                         <a href="paymentedit.jsp" class="buttonwidth">
                             <a href="paymentedit.jsp" class="submit_payment_button">Edit Payment Details</a>
                         </a>
@@ -94,16 +93,19 @@
                             <a href="paymentfinalise.jsp" class="submit_payment_button">Confirm</a>
                         </a>
                     </div>
-                    
-                    <div class="payment_button">
+                    <div class="row">  
+                    <div class="payent_button">
                         <a href="paymentdelete.jsp" class="buttonwidth">
                             <a href ="paymentdelete.jsp" class="delete_payment_button">Delete Payment Details</a>
                         </a>
                     </div>
-                    
-                
-               
             </div>
-        </form>            
+                    
+        
+            </div>
+        </form>      
+                    
+
+
 </body>
 </html>

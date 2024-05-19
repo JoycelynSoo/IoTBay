@@ -81,6 +81,23 @@
             <url-pattern>/AddPaymentServlet</url-pattern>
         </servlet-mapping>
         
+         <servlet>
+        <servlet-name>DeletePaymentServlet</servlet-name>
+            <servlet-class>beans.controller.DeletePaymentServlet</servlet-class>
+        </servlet>
+        <servlet-mapping>
+            <servlet-name>DeletePaymentServlet</servlet-name>
+            <url-pattern>/DeletePaymentServlet</url-pattern>
+        </servlet-mapping>
+        
+         <servlet>
+        <servlet-name>EditPaymentServlet</servlet-name>
+            <servlet-class>beans.controller.EditPaymentServlet</servlet-class>
+        </servlet>
+        <servlet-mapping>
+            <servlet-name>EditPaymentServlet</servlet-name>
+            <url-pattern>/EditPaymentServlet</url-pattern>
+        </servlet-mapping> 
         
         <session-config>
 

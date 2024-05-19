@@ -136,4 +136,44 @@ public void insertLogoutTime(String customerEmail, Timestamp logoutTime) throws 
 
             st.executeUpdate(query);
     } 
+    
+    public void deletePayment (String paymentNameOnCard, String paymentCardNumber, int paymentExpiryMonth, 
+                   int paymentExpiryYear, int paymentCvv, double amount, String paymentDate, String customerEmail) throws SQLException {
+
+    
+    String query = "DELETE FROM APP.PAYMENT " +
+                   "WHERE PAYMENT_NAME_ON_CARD = '" + paymentNameOnCard + "' " +
+                   "AND PAYMENT_CARD_NUMBER = '" + paymentCardNumber + "' " +
+                   "AND PAYMENT_EXPIRY_MONTH = " + paymentExpiryMonth + " " +
+                   "AND PAYMENT_EXPIRY_YEAR = " + paymentExpiryYear + " " +
+                   "AND PAYMENT_CVV = " + paymentCvv + " " +
+                   "AND AMOUNT = " + amount + " " +
+                   "AND PAYMENT_DATE = '" + paymentDate + "' " +
+                   "AND CUSTOMER_EMAIL = '" + customerEmail + "'";
+    
+    st.executeUpdate(query);
+        }
+
+
+    public void editPayment(String paymentNameOnCard, String newPaymentCardNumber, int expMonth, int expYear, int paymentCvv, double amount, String paymentDate, String customerEmail) throws SQLException {
+    String query = "UPDATE APP.PAYMENT " + 
+                   "SET PAYMENT_NAME_ON_CARD = '" + paymentNameOnCard + "', " +
+                   "PAYMENT_CARD_NUMBER = '" + newPaymentCardNumber + "', " +
+                   "PAYMENT_EXPIRY_MONTH = " + expMonth + ", " +
+                   "PAYMENT_EXPIRY_YEAR = " + expYear + ", " +
+                   "PAYMENT_CVV = " + paymentCvv + ", " +
+                   "AMOUNT = " + amount + ", " +
+                   "PAYMENT_DATE = '" + paymentDate + "' " +
+                   "WHERE CUSTOMER_EMAIL = '" + customerEmail + "'";
+    
+
+    st.executeUpdate(query);
+}
+    
+    
+    
+    
+    
+    
+    
 }

@@ -79,7 +79,7 @@
                         
                         <div class="input-box">
                              <span>Total Order Amount</span>
-                             <input type="text" name="totalOrderAmount" value="<%= request.getParameter("cartTotal") %>" required>
+                             <input type="text" name="totalOrderAmount" value="<%= request.getParameter("totalOrderAmount") %>" required>
                           </div>
                     
                     

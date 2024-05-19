@@ -55,11 +55,11 @@ double amount = Double.parseDouble(in.nextLine());
 
 System.out.print("date: ");
 java.util.Date paymentDate = new java.util.Date(System.currentTimeMillis());
-
+String date = "test";
 System.out.print("customerEmail: ");
 String customerEmail = in.nextLine();
 
-
+db.editPayment(paymentNameOnCard, paymentCardNumber, paymentExpiryMonth, paymentExpiryYear, paymentCVV, amount, date, customerEmail);
 //db.addPayment(paymentNameOnCard, paymentCardNumber, paymentExpiryMonth, paymentExpiryYear, paymentCVV, amount, paymentDate, customerEmail);
 
 

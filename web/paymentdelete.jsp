@@ -40,7 +40,7 @@
 </header>
 <body> 
     <div class="paymentContainer">
-        <form id="paymentForm" action="createPayment" method="post"> 
+        <form id="paymentForm" action="DeletePaymentServlet" method="post"> 
             <div class="row">
                     
                    <h2 class="paymentTitleCenter"> Payment details have been successfully deleted! </h2>

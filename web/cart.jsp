@@ -143,10 +143,10 @@
     </header>
   
     <main>
-        
-        <a href="checkour.jsp" class="cta-link">Proceed to Checkout</a>
-        <a href="payment.jsp" class="cta-link">Add payment method</a>
+           <% double totalPrice = 0.0; %>
 
+        <a href="checkour.jsp" class="cta-link">Proceed to Checkout</a>
+        <a href="payment.jsp?totalOrderAmount=<%= totalPrice %>">Proceed to Payment</a>
         
  <div id="cartTableContainer">
     <table id="cartTable">
@@ -173,8 +173,9 @@
 </div>
        
 
-    </main>
-
+<!-- Link to proceed to payment -->
+  
+    </main>    
 
 <script>
 // Retrieve the cart data from local storage
@@ -274,4 +275,8 @@ function removeFromCart(index) {
   // Refresh the cart page to display the updated cart data
   location.reload();
 }
+
+//payment amount to link 
+document.getElementById("paymentLink").href = "payment.jsp?totalOrderAmount=" + totalPrice.toFixed(2);
+
 </script>

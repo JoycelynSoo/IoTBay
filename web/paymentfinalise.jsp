@@ -3,6 +3,7 @@
     Created on : 17 May 2024, 11:37:23 pm
     Author     : afsheensyeda
 --%>
+<%@page import="beans.Payment"%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -40,41 +41,49 @@
 </header>
 <body> 
     <div class="paymentContainer">
-        <form id="paymentForm" action="createPayment" method="post"> 
+        <form id="paymentForm" action="AddPaymentServlet" method="post"> 
             <div class="row">
                 <div class="column">
+                    
+                     <% 
+            Payment payment = (Payment) session.getAttribute("payment");
+            session.setAttribute("payment", payment);
+         %>
                     <h2 class="paymentTitle"> Finalise Payment</h2>
                     
                     
                
-                    
-                    <div class="input-box" >
+                   <div class="input-box" >
                         <span>Name on Card</span>
-                        <input type="text" placeholder="Prefix. Full Name" >
+                        <input type="text" name= "nameOnCard" value="<%=((Payment) session.getAttribute("payment")).getPaymentNameOnCard() %> " readonly>                      
                     </div>
                     <div class="input-box" required>
                         <span>Card Number</span>
-                        <input type="number" placeholder="XXXX XXXX XXXX XXXX" >
+                        <input type="text" name= "cardNumber" value="<%=((Payment) session.getAttribute("payment")).getPaymentCardNumber() %> " readonly>   
+                        
                     </div>
                         
                     
                         <div class="input-box" >
                             <span>Expiry Month</span>
-                            <input type="number" placeholder="Month" min="1" max="12" >
+                            <input type="text" name= "paymentExpiryMonth" value="<%=((Payment) session.getAttribute("payment")).getPaymentExpiryMonth() %> " readonly>
                         </div>
                         <div class="input-box" >
                             <span>Expiry Year</span>
-                            <input type="number" placeholder="Year" min="2024" max="2040" >
+                            <input type="text" name= "expYear" value="<%=((Payment) session.getAttribute("payment")).getPaymentExpiryYear() %> " readonly>
                         </div>
                         <div class="input-box" >
                             <span> CVV </span>
-                            <input type="number" placeholder="123"> 
+                            <input type="text" name= "paymentCvv" value="<%=((Payment) session.getAttribute("payment")).getPaymentCvv() %> " readonly>
                         </div>
                     
                     <div class="input-box">
                         <span>Total Order Amount</span>
-                        <input type="text" name="totalOrderAmount" value="<%= request.getParameter("totalAmount") %>" required>
+                        <input type="text" name="totalOrderAmount" value="<%=((Payment) session.getAttribute("payment")).getAmount() %> " required>
                     </div>
+                
+                </div>
+                        
                 
                 </div>
                     
