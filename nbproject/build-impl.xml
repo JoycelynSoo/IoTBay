@@ -930,7 +930,7 @@ exists or setup the property manually. For example like this:
             <arg value="-jspc.files"/>
             <arg path="${jsp.includes}"/>
             <arg value="-compilerSourceVM ${javac.source}"/>
-            <arg value="-compilerTargetVM ${javac.target}"/> 
+            <arg value="-compilerTargetVM ${javac.target}"/>
             <arg value="-javaEncoding ${source.encoding}"/>
             <classpath path="${java.home}/../lib/tools.jar:${libs.jsp-compiler.classpath}:${libs.jsp-compilation.classpath}"/>
         </java>

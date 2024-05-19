@@ -12,19 +12,9 @@
             <div class="nav-bar">
                 <!--centered-logo-->
                 <div class="logo">
-                    <a href="home.jsp"><img src="CSS/IoTBay.png" alt=Main class="logo"></a>
+                    <img src="CSS/IoTBay.png" alt=Main class="logo">
                 </div>
 
-                <table class="account-mgmt">
-                    <tr>
-                      <td>
-                        <a href="account.jsp"><img src="CSS/account.png" alt="account"></a>
-                      </td>
-                      <td>
-                        <a href="cart.jsp"><img src="CSS/shoppingcart.png" alt="cart"></a>
-                      </td>
-                    </tr>
-                  </table>
             </div>
 
 
