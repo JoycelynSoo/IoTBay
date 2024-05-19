@@ -21,7 +21,7 @@
         </div>
         <table class="account-mgmt">
             <tr>
-                    <td>
+                <td>
                           <div class="account-dropdown">
                         <a href="welcome.jsp"><img src="CSS/account.png" alt="account"></a>
                             <div class="account-dropdown-content">
@@ -29,7 +29,7 @@
                                 <a href="welcome.jsp">Details</a>
                             </div>
                           </div>
-                      </td>
+                </td>
                 <td>
                     <a href="cart.jsp"><img src="CSS/shoppingcart.png" alt="cart"></a>
                 </td>
@@ -78,17 +78,15 @@
                     <div class="input-box saved-card-details"  required> 
                         <span>Select Saved Card</span>
                         <select id="savedCard" name="savedCard">
-                            <option value="1234">**** **** **** 1234</option>
-                            <option value="5678">**** **** **** 5678</option>
-                            <!-- Add more saved card options as needed -->
+                            <option value="1234">**** **** **** 4566</option>
+                            <option value="5678">**** **** **** 3229</option>
                         </select>
                         
                         <div class="input-box">
                              <span>Total Order Amount</span>
-                             <input type="text" name="totalOrderAmount" value="<%= request.getParameter("cartTotal") %>" required>
+                             <input type="text" name="totalOrderAmount" value="<%= request.getParameter("totalOrderAmount") %>"  required>
                           </div>
-                    
-                    
+         
                     </div>                
                 </div>
                 
@@ -124,7 +122,7 @@
                 <a class="buttonwidth">
                     <input class="submit_payment_button" type="submit" value="Continue with Payment"> 
                    <!-- <a href ="payment1.jsp" class="submit_payment_button">Continue with Payment</a> -->
-                </a
+                </a>
         </form>            
     </div>
     

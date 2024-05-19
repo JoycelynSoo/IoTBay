@@ -72,13 +72,21 @@
         </servlet-mapping>
         
         <servlet>
-        
         <servlet-name>AddPaymentServlet</servlet-name>
             <servlet-class>beans.controller.AddPaymentServlet</servlet-class>
         </servlet>
         <servlet-mapping>
             <servlet-name>AddPaymentServlet</servlet-name>
             <url-pattern>/AddPaymentServlet</url-pattern>
+        </servlet-mapping>
+        
+         <servlet>
+        <servlet-name>EditPaymentServlet</servlet-name>
+            <servlet-class>beans.controller.EditPaymentServlet</servlet-class>
+        </servlet>
+        <servlet-mapping>
+            <servlet-name>EditPaymentServlet</servlet-name>
+            <url-pattern>/EditPaymentServlet</url-pattern>
         </servlet-mapping>
         
         
